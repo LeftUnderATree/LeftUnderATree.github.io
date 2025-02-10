@@ -7,8 +7,16 @@ Descriptions go under each image like this! png/jpeg/jpg/gif supported.
 
 /Img/4.png
 
-/Img/5.png // /Img/6.png
+/Img/5.png
 
 /Img/6.png
 
+/Img/7.png
 
+/Img/8.png
+
+/Img/9.png
+
+/Img/10.png
+
+/Img/11.png
