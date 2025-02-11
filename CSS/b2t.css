@@ -3,8 +3,8 @@
     position: fixed;
     bottom: 20px;
     z-index: 100;
-    background-color: #3333337a;
-    color: #fff;
+    background-color: #e0e0e0;
+    color: #1f1f1f;
     border: none;
     padding: 10px 20px;
     border-radius: 5px;
@@ -15,5 +15,5 @@
   }
   
   .back-to-top-button:hover {
-    background-color: #121212;
+    background-color: #e0e0e0;
   }

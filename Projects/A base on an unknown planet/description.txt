@@ -1,0 +1,9 @@
+A base on an unknown planet
+---
+For a long time I wanted to create something related to space, with wonderful, as yet unknown, planets that humanity will visit. From this desire, this project was born.
+---
+Software Tags - separated by commas (marmoset toolbag, unity, UE5, Blender, 3ds Max)
+---
+/Projects/A base on an unknown planet/Img/SrtangePlanetAndABuilding.png
+---
+A base on an unknown planet.html

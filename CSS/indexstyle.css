@@ -28,8 +28,8 @@ html, body {
 
 body {
   font-family: Montserrat, sans-serif;
-  background-color: #121212;
-  color: #d7d7d7;
+  background-color: #e0e0e0;
+  color: #1f1f1f;
   display: flex;
   flex-direction: column;
 }
@@ -38,7 +38,7 @@ h1 {
   font-size: 20px;
   margin: 0;
   margin-bottom: 5px;
-  color: #d7d7d7;
+  color: #1f1f1f;
   -webkit-user-select: none; /* Safari */
   user-select: none;
 }
@@ -71,7 +71,7 @@ h2 {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  border-bottom: 1px solid #2e2e2e;
+  border-bottom: 1px solid #e0e0e0;
 }
 
 .navigation-buttons {
@@ -96,8 +96,8 @@ h2 {
 }
 
 .nav-button.active, .nav-button:hover {
-  background-color: #171717;
-  color: #edb049;
+  background-color: #e0e0e0;
+  color: #ff8000;
 }
 
 .bottom-container {
@@ -105,7 +105,7 @@ h2 {
   display: flex;
   justify-content: center;
   padding: 10px;
-  background-color: #151515;
+  background-color: #e0e0e0;
   border-radius: 5px;
   width: 100%;
   margin-top: 0; /* No margin at the top */
@@ -133,7 +133,7 @@ h2 {
 
   .top-container {
       padding-top: 5px; /* Adjust padding for mobile */
-      border-bottom: 1px solid #2e2e2e;
+      border-bottom: 1px solid #e0e0e0;
   }
 
   .navigation-buttons {
@@ -149,7 +149,7 @@ h2 {
 }
 
   .bottom-container {
-      background-color: #171717;
+      background-color: #e0e0e0;
       padding: 8px; /* Adjust padding for mobile */
       border-radius: 5px; /* Maintain border radius for consistent look */
       margin-top: 0; /* Add margin at the top for spacing */

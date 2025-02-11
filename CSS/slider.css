@@ -63,7 +63,7 @@
     appearance: none;
     width: 8px;
     height: 50px;
-    background: #ffffff;
+    background: #1f1f1f;
     cursor: grab;
     border-radius: 1em;
     box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
@@ -74,7 +74,7 @@
   .image-slider::-moz-range-thumb {
     width: 7px;
     height: 50px;
-    background: #ffffff;
+    background: #1f1f1f;
     cursor: pointer;
     border-radius: 1em;
     box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
@@ -83,9 +83,9 @@
   }
   
   .image-slider::-webkit-slider-thumb:hover {
-    background: #dddddd;
+    background: #1f1f1f;
   }
   
   .image-slider::-moz-range-thumb:hover {
-    background: #dddddd;
+    background: #1f1f1f;
   }
