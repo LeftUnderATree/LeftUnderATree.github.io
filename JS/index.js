@@ -1,11 +1,35 @@
 // Function to create a thumbnail with overlay icons
-function createThumbnail(src, alt, galleryPageUrl, hasMultipleImages, hasVideo, hasYouTube, hasSketchfab) {
+let gradientIndex = 0; // Глобальный счётчик для градиентов
+function createThumbnail(src, alt, galleryPageUrl, hasMultipleImages, hasVideo, hasYouTube, hasSketchfab, isLarge) {
     const thumbnailLink = document.createElement("a");
-    thumbnailLink.href = galleryPageUrl;
+thumbnailLink.href = galleryPageUrl;
+thumbnailLink.classList.add("thumbnail-link");
+
+if (isLarge) {
+    thumbnailLink.classList.add("thumbnail-large-link");
+}
+
+    console.log(`Создан thumbnail: ${alt}, isLarge: ${isLarge}`);
 
     const thumbnailDiv = document.createElement("div");
     thumbnailDiv.classList.add("thumbnail");
 
+    const gradientClasses = ["gradient-green", "gradient-blue", "gradient-pink", "gradient-orange"];
+
+    // Берём цвет по порядку и увеличиваем счётчик
+    const assignedGradient = gradientClasses[gradientIndex % gradientClasses.length];
+    gradientIndex++; // Увеличиваем индекс для следующего thumbnail
+    
+    // Применяем градиент к `thumbnailDiv`
+    thumbnailDiv.classList.add(assignedGradient);
+    
+
+
+   if (isLarge && !thumbnailDiv.classList.contains("thumbnail-large")) {
+    console.log("Добавляем класс thumbnail-large к:", alt);
+    thumbnailDiv.classList.add("thumbnail-large");
+}
+   
     const thumbnailImg = document.createElement("img");
     thumbnailImg.src = src;
     thumbnailImg.alt = alt;
@@ -60,8 +84,14 @@ const thumbnailContainer = document.getElementById("thumbnail-container");
 
 // Function to fetch and parse the description.txt file
 function fetchProjectData(projectName) {
-    const descriptionPath = `../Projects/${projectName}/description.txt`;
-    const mediaPath = `../Projects/${projectName}/media.txt`;
+    console.log("Загружаем проект:", projectName);
+    const isLarge = projectName.startsWith("*"); // Проверяем, начинается ли название с "*"
+    const cleanProjectName = projectName.replace("*", "").trim(); // Убираем "*" из имени проекта
+
+    const descriptionPath = `../Projects/${cleanProjectName}/description.txt`;
+    const mediaPath = `../Projects/${cleanProjectName}/media.txt`;
+
+    
 
     return Promise.all([
         fetch(descriptionPath).then(response => response.text()),
@@ -77,14 +107,24 @@ function fetchProjectData(projectName) {
         const hasYouTube = mediaLines.some(line => line.includes('youtube.com'));
         const hasSketchfab = mediaLines.some(line => line.includes('sketchfab.com'));
 
-        // Find the banner image
-        const bannerImageLine = mediaLines.find(line => line.endsWith('*'));
-        const bannerImageUrl = bannerImageLine ? bannerImageLine.replace('*', '').trim() : null;
+        const isLarge = projectName.startsWith("*"); // Проверяем, начинается ли название с "*"
+        const cleanProjectName = projectName.replace("*", "").trim(); // Убираем "*" из имени проекта
 
-        return { src: thumbnailUrl, alt: title, galleryPageUrl, hasMultipleImages, hasVideo, hasYouTube, hasSketchfab, bannerImageUrl };
+
+        return { 
+            src: thumbnailUrl, 
+            alt: title, 
+            galleryPageUrl, 
+            hasMultipleImages, 
+            hasVideo, 
+            hasYouTube, 
+            hasSketchfab, 
+            isLarge
+        };
     })
     .catch(error => console.error('Error loading project data:', error));
 }
+
 
 // Function to fetch the projects.txt file
 function fetchProjects() {
@@ -94,26 +134,42 @@ function fetchProjects() {
         .catch(error => console.error('Error loading projects:', error));
 }
 
-// Fetch projects and create thumbnails
 fetchProjects().then(projects => {
     let bannerImageSet = false;
-    const fragment = document.createDocumentFragment(); // Create a document fragment
+    const fragment = document.createDocumentFragment();
 
-    const fetchProjectDataPromises = projects.map(projectName => {
+    // Гарантируем, что список проектов будет загружен в том же порядке, что в файле
+    const fetchProjectDataPromises = projects.map((projectName, index) => {
         return fetchProjectData(projectName).then(artwork => {
-            const thumbnail = createThumbnail(artwork.src, artwork.alt, artwork.galleryPageUrl, artwork.hasMultipleImages, artwork.hasVideo, artwork.hasYouTube, artwork.hasSketchfab);
-            fragment.appendChild(thumbnail); // Append each thumbnail to the fragment
-
-            // Set the banner image if not already set
-            if (!bannerImageSet && artwork.bannerImageUrl) {
-                document.querySelector('.top-container').style.backgroundImage = `url(${artwork.bannerImageUrl})`;
-                bannerImageSet = true;
-            }
-        }).catch(error => console.error(`Error loading data for project: ${projectName}`, error));
+            return { index, artwork }; // Запоминаем исходный индекс
+        }).catch(error => {
+            console.error(`Error loading data for project: ${projectName}`, error);
+            return null;
+        });
     });
 
-    // Once all project data has been fetched and processed, append the fragment to the container
-    Promise.all(fetchProjectDataPromises).then(() => {
+    Promise.all(fetchProjectDataPromises).then(results => {
+        results
+            .filter(item => item !== null) // Исключаем ошибки
+            .sort((a, b) => a.index - b.index) // Сортируем по изначальному индексу
+            .forEach(({ artwork }) => {
+                console.log("Создаётся превью:", artwork);
+                const thumbnail = createThumbnail(
+                    artwork.src,
+                    artwork.alt,
+                    artwork.galleryPageUrl,
+                    artwork.hasMultipleImages,
+                    artwork.hasVideo,
+                    artwork.hasYouTube,
+                    artwork.hasSketchfab,
+                    artwork.isLarge // Передаём информацию о размере
+                );
+                fragment.appendChild(thumbnail);
+            });
+
         thumbnailContainer.appendChild(fragment);
     });
 });
+
+
+

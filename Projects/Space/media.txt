@@ -1,22 +1,22 @@
-/Img/1.png
-Descriptions go under each image like this! png/jpeg/jpg/gif supported.
+/Img/1.jpg
+Descriptions go under each image like this! jpg/jpg/jpg/gif supported.
 
-/Img/2.png
+/Img/2.jpg
 
-/Img/3.png
+/Img/3.jpg
 
-/Img/4.png
+/Img/4.jpg
 
-/Img/5.png
+/Img/5.jpg
 
-/Img/6.png
+/Img/6.jpg
 
-/Img/7.png
+/Img/7.jpg
 
-/Img/8.png
+/Img/8.jpg
 
-/Img/9.png
+/Img/9.jpg
 
-/Img/10.png
+/Img/10.jpg
 
-/Img/11.png
+/Img/11.jpg

@@ -2,8 +2,8 @@ Underwater
 ---
 Project Description
 ---
-Software Tags - separated by commas (marmoset toolbag, unity, UE5, Blender, 3ds Max)
+Blender, Photoshop
 ---
-/Projects/Underwater/Img/Cube.png
+/Projects/Underwater/Img/Cube.jpg
 ---
 Underwater.html

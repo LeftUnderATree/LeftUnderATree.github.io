@@ -22,8 +22,7 @@ body {
   display: flex;
   width: 100%;
   height: 100%;
-  padding: 10px; /* Пространство внутри главного контейнера */
-  gap: 10px; /* Расстояние между media-container и info-container */
+  
 }
 
 h1 {
@@ -170,6 +169,8 @@ h3 {
   margin: auto;
   margin-bottom: 15px;
   margin-top: 15px;
+  border-radius: 15px; /* Закругленные края */
+
 }
 
 #project-media video {

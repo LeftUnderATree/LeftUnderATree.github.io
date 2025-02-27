@@ -47,6 +47,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     function updateThumbnailSize() {
-        thumbnailContainer.style.gridTemplateColumns = `repeat(auto-fill, minmax(${minWidth}px, 1fr))`;
+        thumbnailContainer.style.gridTemplateColumns = `repeat(auto-fit, minmax(${minWidth + 100}px, 1fr))`;
+
     }
+    
 });
