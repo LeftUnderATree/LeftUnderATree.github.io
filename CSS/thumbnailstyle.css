@@ -159,55 +159,44 @@
   color: #0080ff;
 }
 
+/* Для больших превью <a> тоже должен быть больше */
+.thumbnail-large-link {
+  grid-column: span 2 !important;
+  grid-row: span 2 !important;
+}
 
-/* Responsive Design for small screens */
-@media screen and (min-width: 548px) and (max-width: 1280px) {
+/* 📱 Телефоны: 1 колонка, убираем увеличение больших превью */
+@media (max-width: 767px) {
   #thumbnail-container {
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Adjusted min-width */
+    grid-template-columns: 1fr;
   }
-  .thumbnail {
-    height: 200px;
+  .thumbnail-large,
+  .thumbnail-large-link {
+    grid-column: span 1 !important; /* Занимает одну колонку */
+    grid-row: span 1 !important; /* Занимает одну строку */
+    
   }
 }
 
-@media screen and (min-width: 375px) and (max-width: 667px) {
+/* 📱 Планшеты: 2 колонки */
+@media (min-width: 768px) and (max-width: 991px) {
   #thumbnail-container {
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Adjusted min-width */
-  }
-  .thumbnail {
-    height: 150px;
-  }
-  .thumbnail-title {
-    opacity: 0;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.75); /* Add this line */
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
-
-@media (max-width: 1280px) {
+/* 💻 Небольшие ноутбуки: 3 колонки */
+@media (min-width: 992px) and (max-width: 1199px) {
   #thumbnail-container {
-      display: flex;
-      flex-direction: column;
-      gap: 50px; /* Расстояние между миниатюрами */
+    grid-template-columns: repeat(3, 1fr);
   }
+}
 
-  .thumbnail {
-      width: 100% !important; /* Растягиваем все на всю ширину */
-      height: auto !important;
-      aspect-ratio: 16 / 9 !important; /* Одинаковое соотношение сторон */
-  }
-
-  .thumbnail-large {
-      width: 100% !important; /* Убираем увеличение */
-      height: auto !important;
-      aspect-ratio: 16 / 9 !important; /* Принудительно делаем одинаковыми */
-  }
-
-  /* Фикс для картинок внутри */
-  .thumbnail img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
+/* 🖥️ Десктопы: 4 колонки */
+@media (min-width: 1200px) {
+  #thumbnail-container {
+    grid-template-columns: repeat(4, 1fr);
+    
   }
 }
 
@@ -221,13 +210,9 @@
   
 }
 
-/* Для больших превью <a> тоже должен быть больше */
 .thumbnail-large-link {
-    grid-column: span 2 !important;
-    grid-row: span 2 !important;
-    display: flex;
-  }
-  
+  display: flex;
+}
   
 
 .thumbnail::before {
