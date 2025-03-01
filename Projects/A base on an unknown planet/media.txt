@@ -1,4 +1,3 @@
-/Img/SrtangePlanetAndABuilding.png
-Descriptions go under each image like this! png/jpeg/jpg/gif supported.
+/Img/SrtangePlanetAndABuilding.jpg
 
-/Img/SrtangePlanetAndABuildingUP.png
+/Img/SrtangePlanetAndABuildingUP.jpg

@@ -1,5 +1,4 @@
 /Img/1.jpg
-Descriptions go under each image like this! jpg/jpg/jpg/gif supported.
 
 /Img/2.jpg
 
