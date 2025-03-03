@@ -103,7 +103,20 @@ document.addEventListener('DOMContentLoaded', () => {
                 i += 1;
             }
 
+
             mediaContainer.appendChild(fragment);
+
+            // ❗ ФИКС: Удаляем заглушку после загрузки изображений
+            const placeholderImage = document.getElementById("placeholder-image");
+            if (placeholderImage) {
+            placeholderImage.style.display = "none"; // Прячем заглушку
+            }
+
+
+
+
+
+
         } catch (error) {
             console.error('Error loading project media:', error);
         }
@@ -159,6 +172,9 @@ document.addEventListener('DOMContentLoaded', () => {
         imgElement1.src = urls[0];
         imgElement1.className = 'image-1';
         imgElement1.alt = 'Primary image';
+
+        imgElement1.loading = "eager";  // ❗ Добавляем, чтобы браузер загружал изображение сразу
+
         imgContainer.appendChild(imgElement1);
 
         if (urls[1]) {
