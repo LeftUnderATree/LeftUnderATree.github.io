@@ -110,11 +110,21 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         setTimeout(() => {
-            document.getElementById("project-media").style.display = "none";
+            const mediaContainer = document.getElementById("project-media");
+        
+            // Прячем и показываем, чтобы форсировать рендеринг
+            mediaContainer.style.display = "none";
             requestAnimationFrame(() => {
-                document.getElementById("project-media").style.display = "block";
+                mediaContainer.style.display = "block";
+        
+                // 🔹 ФОРСИРУЕМ ОБНОВЛЕНИЕ СТИЛЕЙ 🔹
+                document.querySelectorAll("#project-media img").forEach((img) => {
+                    img.style.width = "100%";  // Растягиваем изображение на всю ширину контейнера
+                    img.style.height = "auto"; // Сохраняем пропорции
+                });
             });
         }, 100);
+        
         
 
     };
