@@ -1,11 +1,12 @@
+Visual Storytelling
+Architectural Visualization
+Motion Graphics
 3D Modelling
-Sculpting
 Texturing
-High Poly Modelling
+Game Development
 UV-Unwrapping
 Retopology
 Hand-painted Texturing
-Weapon Modelling
 Environment Art
-Tileable Materials
-punching faces
+Music Video Production
+3D World Building
