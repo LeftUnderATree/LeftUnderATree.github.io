@@ -20,12 +20,14 @@ document.addEventListener("DOMContentLoaded", async () => {
 
         recommendations.forEach((rec, index) => {
             const lines = rec.split('\n').map(line => line.trim()).filter(line => line);
-            const hasAvatar = lines[1].startsWith('http');
             const name = lines[0];
-            const avatar = hasAvatar ? lines[1] : '';
-            const position = hasAvatar ? lines[2] : lines[1];
-            const date = hasAvatar ? lines[3] : lines[2];
-            const quote = hasAvatar ? lines[4] : lines[3];
+            const avatar = lines[1]; // теперь не важно, локальный путь или ссылка
+            const position = lines[2];
+            const date = lines[3];
+            const quote = lines[4];
+
+            const hasAvatar = avatar && avatar !== '';
+
 
             const recommendation = document.createElement("div");
             recommendation.className = "recommendation";
@@ -60,33 +62,48 @@ document.addEventListener("DOMContentLoaded", async () => {
         let currentIndex = 0;
         let isTransitioning = false;
 
-        function showRecommendation(index, direction) {
-            if (isTransitioning) return;
+        function showRecommendation(index) {
+            if (isTransitioning || index === currentIndex) return;
             isTransitioning = true;
-
+        
             const current = recommendationsElements[currentIndex];
             const next = recommendationsElements[index];
-
-            if (direction === 'left') {
-                current.classList.add('recommendation-exit-left');
-                next.classList.add('recommendation-enter-right');
-            } else if (direction === 'right') {
-                current.classList.add('recommendation-exit-right');
-                next.classList.add('recommendation-enter-left');
-            }
-
+        
+            // Сначала скрываем текущую
+            current.style.opacity = 0;
+            current.style.zIndex = 2;
+        
+            // Ждём завершения исчезновения (800ms)
             setTimeout(() => {
-                current.classList.remove('active', 'recommendation-exit-left', 'recommendation-exit-right');
+                current.classList.remove('active');
+                current.style.opacity = '';
+                current.style.zIndex = 1;
+        
+                // Только теперь показываем следующую
                 next.classList.add('active');
-                next.classList.remove('recommendation-enter-left', 'recommendation-enter-right');
+                next.style.opacity = 0;
+                next.style.zIndex = 2;
+        
+                // Принудительная задержка перед появлением (2 rAF = 1 frame delay)
+                requestAnimationFrame(() => {
+                    requestAnimationFrame(() => {
+                        next.style.opacity = 1;
+                    });
+                });
+        
                 currentIndex = index;
                 isTransitioning = false;
-            }, 500); // Match the CSS transition duration
-
+            }, 500);
+        
+            // Обновление точек
             dots.forEach((dot, i) => {
                 dot.classList.toggle("active", i === index);
             });
         }
+        
+        
+        
+        
 
         function debounce(func, wait) {
             let timeout;
@@ -153,6 +170,13 @@ document.addEventListener("DOMContentLoaded", async () => {
 
         window.addEventListener('resize', adjustHeight);
         adjustHeight(); // Initial call to set height
+
+        // Автоматическая смена рекомендаций каждые 8 секунд
+    setInterval(() => {
+    const nextIndex = (currentIndex + 1) % recommendationsElements.length;
+    showRecommendation(nextIndex, 'left');
+    }, 8000);
+
 
     } catch (error) {
         console.error('Failed to load recommendations:', error);
