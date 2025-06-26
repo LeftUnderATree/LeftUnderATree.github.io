@@ -1,4 +1,4 @@
-/Resources/Img/Scary.png
+/Resources/Img/Niko.jpg
 LeftUnderATree
 NIKO (3D Generalist)
 Moscow, Russia
