@@ -1,6 +1,7 @@
 Space
 ---
-Project Description
+A cinematic sci-fi series exploring isolation and scale through the journey of an astronaut drifting near the rings of a distant gas giant. 
+With bold lighting, sweeping compositions, and stylized environments, the project blends realism and surrealism to capture the quiet tension between humanity and the vast unknown.
 ---
 Blender, Photoshop
 ---
