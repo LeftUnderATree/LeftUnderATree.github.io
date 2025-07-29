@@ -1,0 +1,41 @@
+/Img/AllModelsCover.jpg
+
+/Img/TableFan.jpg
+Stylized desk fan with metal frame and retro industrial silhouette.
+
+/Img/TableFan_Wire.jpg
+6,624 tris | Single 2K texture | Game-ready asset
+
+https://sketchfab.com/3d-models/mid-century-table-fan-691cd09c640e481b93abb9d4362e8567
+
+/Img/EasyChair.jpg
+Low-profile lounge chair with wooden frame and fabric cushions.
+
+/Img/EasyChair_Wire.jpg
+4,856 tris | Single 2K texture | Game-ready asset
+
+https://sketchfab.com/3d-models/mid-century-easy-chair-50e1a565c06047cf9192907d30ad2f07
+
+/Img/Teapot.jpg
+Compact metallic teapot with a stylized silhouette and loop handle.
+
+/Img/Teapot_Wire.jpg
+11,816 tris | Single 2K texture | Game-ready asset
+
+https://sketchfab.com/3d-models/spherical-pewter-teapot-cb76e5477f4041d19967eb5df660a90a
+
+/Img/LoungeChair.jpg
+Bold angular armchair with exposed wood and padded upholstery.
+
+/Img/LoungeChair_Wire.jpg
+4,260 tris | Single 2K texture | Game-ready asset
+
+https://sketchfab.com/3d-models/geometric-lounge-chair-9e6b9c8fc0244c1c983e576b2646b9a7
+
+/Img/TableLamp.jpg
+Decorative spherical lamp with a minimalist, mid-century design.
+
+/Img/TableLamp_Wire.jpg
+4,640 tris | Single 2K texture | Game-ready asset
+
+https://sketchfab.com/3d-models/mid-century-globe-table-lamp-f4679a96486d49dba6b5bc6493c91758

@@ -1,0 +1,9 @@
+Mid-Century Prop Pack
+---
+A collection of five stylized mid-century props, optimized for real-time applications. Each asset is game-ready, features clean topology, efficient UVs, and a single 2K texture set. Designed with performance and readability in mind — ideal for games or interactive environments.
+---
+Blender, Substance Painter, Photoshop
+---
+/Projects/Mid-Century Prop Pack/Img/AllModelsCover.jpg
+---
+Mid-Century Prop Pack.html
