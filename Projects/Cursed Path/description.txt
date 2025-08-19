@@ -1,0 +1,9 @@
+Cursed Path
+---
+Cursed Path is a PS1-style survival horror vertical slice. The game features five unique enemy archetypes, a two-phase boss fight, and audio-driven navigation where players must rely on sound cues to survive. A minimalist, contextual HUD reinforces immersion — only appearing when relevant. Built in Unity, the project demonstrates AI design, atmosphere, and retro visual style.
+---
+Unity, Blender, Photoshop
+---
+/Projects/Cursed Path/Img/CursedPath0.jpg
+---
+Cursed Path.html

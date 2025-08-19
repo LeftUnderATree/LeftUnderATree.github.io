@@ -1,6 +1,6 @@
-/Resources/Img/Scary.png
+/Resources/Img/LUATREE.jpg
 LeftUnderATree
-NIKO (3D Generalist)
+Nikolaev Daniil (3D Generalist)
 Moscow, Russia
 https://www.youtube.com/@daniilnikolaev
 https://www.linkedin.com
