@@ -225,6 +225,10 @@ hr {
   padding: 5px;
 }  
 
+.slider-line {
+  background: #e0e0e0 !important; /* или нужный цвет */
+}
+
 /* Responsive Design */
 @media (max-width: 600px) {
   .container {
