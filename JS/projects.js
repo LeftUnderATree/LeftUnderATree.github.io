@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
         return text
             .split('\n')
             .map(line => line.trim())
-            .filter(Boolean)
+            .filter(line => line && !line.startsWith('#'))
             .map(name => name.replace(/^\*/, '').trim()); // снимаем звёздочку
     } catch (error) {
         console.error('Error loading projects:', error);
@@ -437,8 +437,10 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initialize the app
     const init = async () => {
         projects = await fetchProjects();
-        document.getElementById('prev-project').addEventListener('click', () => navigateProjects(-1));
-        document.getElementById('next-project').addEventListener('click', () => navigateProjects(1));
+        const prevBtn = document.getElementById('prev-project');
+        const nextBtn = document.getElementById('next-project');
+        if (prevBtn) prevBtn.addEventListener('click', () => navigateProjects(-1));
+        if (nextBtn) nextBtn.addEventListener('click', () => navigateProjects(1));
         await fetchDescription();
         await loadMedia();
         await fetchStats(); // Fetch and display the stats
