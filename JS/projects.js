@@ -2,14 +2,26 @@ document.addEventListener('DOMContentLoaded', () => {
     let projects = [];
 
     const fetchProjects = async () => {
-        try {
-            const response = await fetch('../../Config/projects.txt');
-            const text = await response.text();
-            return text.split('\n').map(line => line.trim()).filter(line => line);
-        } catch (error) {
-            console.error('Error loading projects:', error);
-        }
+    try {
+        const response = await fetch('../../Config/projects.txt');
+        const text = await response.text();
+        return text
+            .split('\n')
+            .map(line => line.trim())
+            .filter(Boolean)
+            .map(name => name.replace(/^\*/, '').trim()); // снимаем звёздочку
+    } catch (error) {
+        console.error('Error loading projects:', error);
+        return [];
+    }
+};
+
+    const getCurrentProjectFolder = () => {
+        const parts = window.location.pathname.split('/');
+        const folder = parts.slice(-2, -1)[0] || '';
+        return decodeURIComponent(folder); // "Cursed%20Path" -> "Cursed Path"
     };
+
 
     const fetchDescription = async () => {
         try {
@@ -371,23 +383,27 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     const navigateProjects = async (direction) => {
-        const currentProject = window.location.pathname.split('/').slice(-2, -1)[0];
-        const currentIndex = projects.indexOf(currentProject);
+        const currentProject = getCurrentProjectFolder();
+        const currentIndex = projects.findIndex(
+            p => p.toLowerCase() === currentProject.toLowerCase()
+        );
 
-        if (currentIndex !== -1) {
-            let newIndex = currentIndex + direction;
-            if (newIndex < 0) newIndex = projects.length - 1;
-            if (newIndex >= projects.length) newIndex = 0;
+        if (currentIndex === -1) return;
 
-            const newProject = projects[newIndex];
-            try {
-                const response = await fetch(`../${newProject}/description.txt`);
-                const text = await response.text();
-                const htmlFileName = text.split('---')[4].trim(); // Extract the HTML filename from the description.txt
-                window.location.href = `../${newProject}/${htmlFileName}`;
-            } catch (error) {
-                console.error('Error loading next project description:', error);
-            }
+        let newIndex = currentIndex + direction;
+        if (newIndex < 0) newIndex = projects.length - 1;
+        if (newIndex >= projects.length) newIndex = 0;
+
+        const newProject = projects[newIndex]; // уже без '*'
+        const folder = encodeURIComponent(newProject); // кодируем пробелы
+        try {
+            const response = await fetch(`../${folder}/description.txt`);
+            const text = await response.text();
+            const htmlFileName = text.split('---')[4].trim();
+            const file = encodeURIComponent(htmlFileName);
+            window.location.href = `../${folder}/${file}`;
+        } catch (error) {
+            console.error('Error loading next project description:', error);
         }
     };
 

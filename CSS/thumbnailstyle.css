@@ -129,35 +129,7 @@
   left: 40px; /* Adjust spacing between icons */
 }
 
-.resize-buttons {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-  z-index: 1000; /* Ensure they are above other elements */
-}
 
-.resize-button {
-  background-color: #121212;
-  color: white;
-  border: none;
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  font-size: 20px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: background-color 0.3s, color 0.3s;
-}
-
-.resize-button:hover {
-  background-color: #1f1f1f;
-  color: #0080ff;
-}
 
 /* Для больших превью <a> тоже должен быть больше */
 .thumbnail-large-link {
