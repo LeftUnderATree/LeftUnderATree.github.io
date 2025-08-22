@@ -58,7 +58,15 @@ h2 {
   flex-direction: column;
   width: 100%;
   flex: 1;
-  overflow-y: auto; /* Ensure main container scrolls if necessary */
+  overflow-y: auto;          /* прокрутка остаётся */
+  scrollbar-width: none;     /* Firefox — скрыть полосу */
+  -ms-overflow-style: none;  /* старый IE/Edge — скрыть полосу */
+}
+
+/* Скрыть полосу прокрутки у .main-container, но оставить скролл */
+.main-container::-webkit-scrollbar {
+  width: 0;
+  height: 0;
 }
 
 .top-container {
