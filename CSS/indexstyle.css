@@ -119,6 +119,17 @@ h2 {
   margin-top: 0; /* No margin at the top */
 }
 
+
+/* подпись автора внизу главной (стили как у h2) */
+.site-credit {
+  text-align: center;
+  margin: 24px 0 16px;
+  font: 50 14px 'Poppins', sans-serif;  /* как твои h2 */
+  color: grey;                            /* как у h2 */
+  user-select: none;
+}
+
+
 @media (max-width: 600px) {
   body {
     font-size: 14px; /* Adjust the base font size for better readability on small screens */

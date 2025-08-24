@@ -43,6 +43,26 @@ function addUserInformation() {
             userNameLink.appendChild(userName);
             userInfoPanel.appendChild(userNameLink);
 
+            // --- подпись автора внизу главной страницы ---
+            (function addSiteCreditAtBottom() {
+            // Делаем только на главной: на ней есть грид превью
+            const isHome = !!document.getElementById('thumbnail-container');
+            if (!isHome) return;
+
+            const main = document.querySelector('.main-container');
+            if (!main) return;
+
+            const credit = document.createElement('h2');   // как h2
+            credit.className = 'site-credit';
+            // берём имя так же, как для h1 (userName)
+            const year = new Date().getFullYear();
+            credit.textContent = ` Website created by ${profileName}`;
+
+            // ставим ИМЕННО в самый низ страницы (после всей сетки)
+            main.appendChild(credit);
+            })();
+
+
             // Create and append the user role
             const userRole = document.createElement("h2");
             userRole.textContent = profileRole; // Your Current Title & Studio from txt
@@ -125,6 +145,8 @@ function addUserInformation() {
 
             // Append the fragment to the container
             container.appendChild(fragment);
+
+            
         })
         .catch(error => console.error('Error loading user information:', error));
 }
