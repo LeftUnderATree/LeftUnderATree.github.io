@@ -1,10 +1,10 @@
 /Img/AllModelsCover.jpg
 
 /Img/TableFan.jpg
+Stylized desk fan with metal frame and retro industrial silhouette.
 
-
-/Img/TableFan.jpg
-
+/Img/TableFan_Wire.jpg
+6,624 tris | Single 2K texture | Game-ready asset
 
 https://sketchfab.com/3d-models/mid-century-table-fan-691cd09c640e481b93abb9d4362e8567
 
