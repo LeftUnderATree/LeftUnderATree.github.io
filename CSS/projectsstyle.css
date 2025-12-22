@@ -250,4 +250,9 @@ hr {
   .info-container {
     flex: 1;
   }
+
+  #project-media img {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
 }
