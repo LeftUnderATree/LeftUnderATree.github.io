@@ -166,9 +166,8 @@ h3 {
   width: auto;
   height: auto;
   object-fit: contain;
-  margin: auto;
-  margin-bottom: 15px;
-  margin-top: 15px;
+
+  margin: 15px 0;
   border-radius: 15px; /* Закругленные края */
 
 }
@@ -210,20 +209,36 @@ hr {
   padding-bottom: 56.25%; /* 16:9 aspect ratio */
   height: 0;
   overflow: hidden;
+
+  border-radius: 15px;
+  background-color: #e0e0e0;
+  transform: translateZ(0);
+  margin: 15px 0;
+
 }
 
 .responsive-iframe-container iframe {
   position: absolute;
-  top: 0;
-  left: 0;
+  inset: 0;
   width: 100%;
   height: 100%;
   border: none;
+
+  padding: 0;                           /* важно для YouTube */
+  clip-path: inset(5px round 10px);     /* visually matches img border-radius 15px with padding 5px */
 }
 
-.responsive-iframe-container iframe, #project-media video, #project-media img {
+
+#project-media video,
+#project-media img {
   padding: 5px;
-}  
+}
+ 
+
+
+
+
+
 
 .slider-line {
   background: #e0e0e0 !important; /* или нужный цвет */
@@ -251,8 +266,11 @@ hr {
     flex: 1;
   }
 
+  .responsive-iframe-container {
+  margin: 0px 0;
+  }
+
   #project-media img {
-    margin-top: 0;
-    margin-bottom: 0;
+  margin: 0px 0;
   }
 }
