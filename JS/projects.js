@@ -206,6 +206,10 @@ document.addEventListener('DOMContentLoaded', () => {
             const sliderLine = document.createElement('div');
             sliderLine.className = 'slider-line';
 
+            const sliderHandle = document.createElement('div');
+            sliderHandle.className = 'slider-handle';
+
+
             const slider = document.createElement('input');
             slider.type = 'range';
             slider.min = '0';
@@ -213,17 +217,48 @@ document.addEventListener('DOMContentLoaded', () => {
             slider.value = '50';
             slider.className = 'image-slider';
             slider.setAttribute('aria-label', 'Image comparison slider');
-            slider.addEventListener('input', () => {
-                const value = slider.value;
-                imgElement2.style.clipPath = `inset(0 0 0 ${value}%)`;
-                sliderLine.style.left = `calc(${value}% - 1px)`; // Ensure the line is aligned with the thumb
-            });
+
+            const THUMB_SIZE = 22; // должен совпадать с CSS thumb (22x22)
+
+            const updateComparison = () => {
+            const val = Number(slider.value); // 0..100
+            const w = imgContainer.clientWidth;
+
+            const x = (val / 100) * w;     // 0..w (до самого края)
+
+            sliderLine.style.left = `${x}px`;
+            sliderHandle.style.left = `${x}px`;
+
+            const rightInset = Math.max(0, w - x);
+            imgElement2.style.clipPath = `inset(0 ${rightInset}px 0 0)`;
+
+            };
+
+            slider.addEventListener('input', updateComparison);
+            window.addEventListener('resize', updateComparison);
+
 
             sliderContainer.appendChild(sliderLine);
+            sliderContainer.appendChild(sliderHandle);
             sliderContainer.appendChild(slider);
 
+
+            imgContainer.appendChild(sliderContainer);
             mediaElement.appendChild(imgContainer);
-            mediaElement.appendChild(sliderContainer);
+
+            // ✅ ВАЖНО: первый правильный апдейт только после загрузки картинки + layout
+            const runInit = () => {
+            requestAnimationFrame(() => updateComparison());
+            };
+
+            // если img2 уже в кэше — onload может не сработать, поэтому два пути:
+            if (imgElement2.complete && imgElement1.complete) {
+            runInit();
+            } else {
+            imgElement1.addEventListener('load', runInit, { once: true });
+            imgElement2.addEventListener('load', runInit, { once: true });
+            }
+
         } else {
             mediaElement.appendChild(imgContainer);
         }
