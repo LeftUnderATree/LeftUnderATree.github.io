@@ -1,7 +1,7 @@
 .nav-button {
   background-color: #e0e0e0;
   border: none;
-  border-radius: 0.1em;
+  border-radius: 0.25em;
   color: white;
   font-size: 24px;
   padding: 10px;
@@ -19,11 +19,11 @@
 }
 
 #prev-project {
-  left: calc((100vw - 100%) / 2 + 10px); /* Adjust to the left within media-container */
+  left: calc((100vw - 100%) / 2 + 15px); /* Adjust to the left within media-container */
 }
 
 #next-project {
-  right: calc((100vw - 60%) / 2 + 15px); /* Adjust to the right within media-container */
+  right: calc((100vw - 60%) / 2 + 20px); /* Adjust to the right within media-container */
 }
 
 /* Responsive Design for Navigation Buttons */
@@ -35,10 +35,10 @@
   }
 
   #prev-project {
-      left: 10px; /* Keep the button at the center */
+      left: 15px; /* Keep the button at the center */
   }
 
   #next-project {
-      right: 10px; /* Keep the button at the center */
+      right: 15px; /* Keep the button at the center */
   }
 }
