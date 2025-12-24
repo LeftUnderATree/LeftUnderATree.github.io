@@ -54,7 +54,6 @@
   position: relative;
   transition: transform 0.5s ease-out;
   transform-origin: center;
-  will-change: transform;
 }
 
 
@@ -96,17 +95,7 @@
   
 }
 
-.thumbnail:hover::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  transition: opacity 0.5s;
-  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), #1f1f1f);
-  z-index: 1;
-}
+
 
 .overlay-icon {
   position: absolute;
@@ -225,7 +214,26 @@
   background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), #ff8000);
 }
 
+/* will-change только там, где реально есть hover (десктоп/ноут) */
+@media (hover: hover) and (pointer: fine) {
+  .thumbnail { will-change: transform; }
+}
+
+@media (max-width: 767px) {
+  .thumbnail {
+    box-shadow: 0px 8px 18px rgba(0, 0, 0, 0.25);
+  }
+}
 
 
-
+.thumbnail,
+.thumbnail::before,
+.thumbnail img,
+.thumbnail-title,
+.overlay-icon {
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
 
