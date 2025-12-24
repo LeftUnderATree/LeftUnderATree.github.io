@@ -323,24 +323,33 @@ hr {
     display: contents;
   }
 
-  /* порядок блоков (сверху вниз) */
-  .project-description-container { grid-row: 1; }
-  h3 { grid-row: 2; }
-  #project-tags { grid-row: 3; }
+/* порядок блоков (сверху вниз) */
+.project-description-container { grid-row: 1; }
 
-  /* 🔥 ВАЖНО: project stats теперь ВЫШЕ медиа */
-  #project-stats { grid-row: 4; }
+/* hr после description */
+.project-description-container + hr {
+  grid-row: 2;
+  display: block;
+  margin: 10px 0;
+}
 
-  .media-container { grid-row: 5; }
+h3 { grid-row: 3; }
 
-  /* аватар / user info */
-  .top-container { grid-row: 6; }
+#project-tags { grid-row: 4; }
 
-  /* по желанию: hr на мобилке можно скрыть, чтобы не рвало структуру */
-  .info-container + hr,
-  hr{
-    display: none;
-  }
+/* hr после tags */
+#project-tags + hr {
+  grid-row: 5;
+  display: block;
+  margin: 10px 0;
+}
+
+#project-stats { grid-row: 6; }
+
+.media-container { grid-row: 7; }
+
+.top-container { grid-row: 8; }
+
 
   /* чуть воздуха для верхних блоков */
   .project-description-container{
