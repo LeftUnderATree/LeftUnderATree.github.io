@@ -336,6 +336,8 @@ hr {
   width: calc(100% - 20px);     /* учитываем padding 10px */
   justify-self: center;
 
+  opacity: 1;
+
   border: 0;                    /* ❗️убираем дефолтный hr */
   height: 1px;
   background: rgba(0, 0, 0, 0.08);
