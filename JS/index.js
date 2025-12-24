@@ -34,13 +34,6 @@ if (isLarge) {
     thumbnailImg.src = src;
     thumbnailImg.alt = alt;
 
-    // iOS Safari: reduce white flashing during fast scroll
-    thumbnailImg.loading = "eager";
-    thumbnailImg.decoding = "sync";
-    thumbnailImg.fetchPriority = "high";
-    thumbnailImg.draggable = false;
-
-
     const thumbnailTitle = document.createElement("div");
     thumbnailTitle.classList.add("thumbnail-title");
     thumbnailTitle.innerText = alt;

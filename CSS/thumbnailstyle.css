@@ -54,6 +54,7 @@
   position: relative;
   transition: transform 0.5s ease-out;
   transform-origin: center;
+  will-change: transform;
 }
 
 
@@ -224,19 +225,6 @@
   background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), #ff8000);
 }
 
-
-
-/* iOS Safari: prevent white flashes while fast scrolling */
-.thumbnail,
-.thumbnail::before,
-.thumbnail img,
-.thumbnail-title,
-.overlay-icon {
-  -webkit-transform: translateZ(0);
-  transform: translateZ(0);
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-}
 
 
 
