@@ -326,29 +326,41 @@ hr {
 /* порядок блоков (сверху вниз) */
 .project-description-container { grid-row: 1; }
 
-/* hr после description */
-.project-description-container + hr {
-  grid-row: 2;
+.project-description-container + hr { grid-row: 2; }
+
+
+/* HR — безопасная версия для реальных телефонов */
+.project-description-container + hr,
+#project-tags + hr {
+  grid-column: 1 / -1;          /* всегда на всю ширину */
+  width: calc(100% - 20px);     /* учитываем padding 10px */
+  justify-self: center;
+
+  border: 0;                    /* ❗️убираем дефолтный hr */
+  height: 1px;
+  background: rgba(0, 0, 0, 0.08);
+
   display: block;
-  margin: 10px 0;
+  margin: 12px 0;
 }
+
 
 h3 { grid-row: 3; }
 
 #project-tags { grid-row: 4; }
 
-/* hr после tags */
-#project-tags + hr {
-  grid-row: 5;
-  display: block;
-  margin: 10px 0;
-}
+#project-tags + hr { grid-row: 5; }
 
 #project-stats { grid-row: 6; }
 
 .media-container { grid-row: 7; }
 
 .top-container { grid-row: 8; }
+
+
+
+
+
 
 
   /* чуть воздуха для верхних блоков */
@@ -364,4 +376,5 @@ h3 { grid-row: 3; }
     margin-top: 20px;
     
   }
+
 }
