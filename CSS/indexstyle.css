@@ -12,9 +12,11 @@ html, body {
   width: 100%;
   overflow-x: hidden;
   box-sizing: border-box;
-  height: auto;        /* важно */
-  min-height: 100%;    /* оставить базу */
+
+  height: auto;         /* важно */
+  min-height: 100%;     /* база */
 }
+
 
 
 html::-webkit-scrollbar,
@@ -30,15 +32,7 @@ html {
 }
 
 
-/* Body Styling */
-html, body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  height: 100%;
-  overflow-x: hidden; /* Prevent horizontal overflow */
-  box-sizing: border-box;
-}
+
 
 body {
   font-family: Montserrat, sans-serif;
