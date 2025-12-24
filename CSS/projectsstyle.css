@@ -323,47 +323,24 @@ hr {
     display: contents;
   }
 
-/* порядок блоков (сверху вниз) */
-.project-description-container { grid-row: 1; }
+  /* порядок блоков (сверху вниз) */
+  .project-description-container { grid-row: 1; }
+  h3 { grid-row: 2; }
+  #project-tags { grid-row: 3; }
 
-.project-description-container + hr { grid-row: 2; }
+  /* 🔥 ВАЖНО: project stats теперь ВЫШЕ медиа */
+  #project-stats { grid-row: 4; }
 
+  .media-container { grid-row: 5; }
 
-/* HR — безопасная версия для реальных телефонов */
-.project-description-container + hr,
-#project-tags + hr {
-  grid-column: 1 / -1;          /* всегда на всю ширину */
-  width: calc(100% - 20px);     /* учитываем padding 10px */
-  justify-self: center;
+  /* аватар / user info */
+  .top-container { grid-row: 6; }
 
-  opacity: 1;
-
-  border: 0;                    /* ❗️убираем дефолтный hr */
-  height: 1px;
-  background: rgba(0, 0, 0, 0.08);
-
-  display: block;
-  margin: 12px 0;
-}
-
-
-h3 { grid-row: 3; }
-
-#project-tags { grid-row: 4; }
-
-#project-tags + hr { grid-row: 5; }
-
-#project-stats { grid-row: 6; }
-
-.media-container { grid-row: 7; }
-
-.top-container { grid-row: 8; }
-
-
-
-
-
-
+  /* по желанию: hr на мобилке можно скрыть, чтобы не рвало структуру */
+  .info-container + hr,
+  hr{
+    display: none;
+  }
 
   /* чуть воздуха для верхних блоков */
   .project-description-container{
@@ -378,5 +355,4 @@ h3 { grid-row: 3; }
     margin-top: 20px;
     
   }
-
 }
