@@ -7,9 +7,15 @@
 
 /* Hide scrollbar (keep scroll working) */
 html, body {
-  scrollbar-width: none;      /* Firefox */
-  -ms-overflow-style: none;   /* IE/old Edge */
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+  box-sizing: border-box;
+  height: auto;        /* важно */
+  min-height: 100%;    /* оставить базу */
 }
+
 
 html::-webkit-scrollbar,
 body::-webkit-scrollbar {
