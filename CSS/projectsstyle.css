@@ -48,6 +48,7 @@ h3 {
   -webkit-user-select: none; /* Standard property */
   user-select: none; /* Safari and iOS support */
   padding-left: 10px;
+  margin-bottom: 5px;
 }
 
 .media-container {
@@ -305,5 +306,53 @@ hr {
   
   .responsive-iframe-container iframe{
     height: calc(100% - 10px);
+  }
+}
+
+/* --- MOBILE: put project description + tags above media --- */
+@media (max-width: 600px) {
+
+  /* превращаем страницу в grid */
+  .container{
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  /* "распаковываем" info-container, чтобы его дети стали grid-элементами */
+  .info-container{
+    display: contents;
+  }
+
+  /* порядок блоков (сверху вниз) */
+  .project-description-container { grid-row: 1; }
+  h3 { grid-row: 2; }
+  #project-tags { grid-row: 3; }
+
+  /* 🔥 ВАЖНО: project stats теперь ВЫШЕ медиа */
+  #project-stats { grid-row: 4; }
+
+  .media-container { grid-row: 5; }
+
+  /* аватар / user info */
+  .top-container { grid-row: 6; }
+
+  /* по желанию: hr на мобилке можно скрыть, чтобы не рвало структуру */
+  .info-container + hr,
+  hr{
+    display: none;
+  }
+
+  /* чуть воздуха для верхних блоков */
+  .project-description-container{
+      padding: 10px;
+  }
+  
+  #project-tags{
+    padding: 0px 10px;
+  }
+
+    .top-container {
+    margin-top: 20px;
+    
   }
 }
