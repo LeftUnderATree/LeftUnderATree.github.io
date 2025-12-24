@@ -7,7 +7,6 @@
   width: 85%;
   align-content: start;
   padding-bottom: 100px; /* Добавляем отступ снизу */
-  background-color: #e0e0e0;
 }
 
 
@@ -55,11 +54,8 @@
   position: relative;
   transition: transform 0.5s ease-out;
   transform-origin: center;
-
+  will-change: transform;
 }
-
-
-
 
 
 .thumbnail:hover {
@@ -100,7 +96,17 @@
   
 }
 
-
+.thumbnail:hover::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: opacity 0.5s;
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), #1f1f1f);
+  z-index: 1;
+}
 
 .overlay-icon {
   position: absolute;
@@ -221,16 +227,5 @@
 
 
 
-/* Mobile fast-scroll: reduce white flashing */
-.thumbnail,
-.thumbnail::before,
-.thumbnail img,
-.thumbnail-title,
-.overlay-icon {
-  -webkit-transform: translateZ(0);
-  transform: translateZ(0);
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-}
 
 
