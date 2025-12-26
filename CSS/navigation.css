@@ -41,4 +41,8 @@
   #next-project {
       right: 15px; /* Keep the button at the center */
   }
+
+    .nav-button {
+    display: none;
+  }
 }
