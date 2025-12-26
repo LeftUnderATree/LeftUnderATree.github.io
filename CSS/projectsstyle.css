@@ -198,6 +198,9 @@ h3 {
   display: block;
   object-fit: cover;
   pointer-events: none;
+
+  border-radius: 10px;
+
 }
 
 
