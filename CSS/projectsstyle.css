@@ -192,10 +192,14 @@ h3 {
 
 
 
-#project-media video {
+#project-media video{
   width: 100%;
   height: auto;
+  display: block;
+  object-fit: cover;
+  pointer-events: none;
 }
+
 
 hr {
   opacity: .05;

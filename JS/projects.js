@@ -267,20 +267,33 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     const createVideoElement = (url) => {
-        const mediaElement = document.createElement('div');
-        mediaElement.className = 'media-item';
+    const mediaElement = document.createElement('div');
+    mediaElement.className = 'media-item';
 
-        const videoElement = document.createElement('video');
-        videoElement.src = url;
-        videoElement.controls = true;
-        videoElement.autoplay = true;
-        videoElement.loop = true;
-        videoElement.muted = true;
-        videoElement.title = 'Video content';
+    const videoElement = document.createElement('video');
+    videoElement.src = url;
 
-        mediaElement.appendChild(videoElement);
-        return mediaElement;
+    // ✅ ведём себя как GIF
+    videoElement.autoplay = true;
+    videoElement.loop = true;
+    videoElement.muted = true;
+
+    // ✅ критично для телефонов (не fullscreen)
+    videoElement.playsInline = true;
+    videoElement.setAttribute('playsinline', '');
+    videoElement.setAttribute('webkit-playsinline', '');
+
+    // ✅ чтобы не показывался плеер
+    videoElement.controls = false;
+    videoElement.removeAttribute('controls');
+
+    // ✅ мелочь, но полезно
+    videoElement.preload = 'metadata';
+
+    mediaElement.appendChild(videoElement);
+    return mediaElement;
     };
+
 
     const createYouTubeElement = (url) => {
         const mediaElement = document.createElement('div');
