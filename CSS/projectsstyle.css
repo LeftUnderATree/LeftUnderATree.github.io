@@ -323,7 +323,7 @@ hr {
   }
   
   .responsive-iframe-container iframe{
-    height: calc(100% - 11px);
+    height: calc(100% - 11.5px);
   }
 }
 
