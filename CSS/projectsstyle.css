@@ -323,7 +323,8 @@ hr {
   }
   
   .responsive-iframe-container iframe{
-    height: calc(100% - 11.5px);
+    aspect-ratio: 16 / 9;    
+    height: auto;
   }
 }
 
