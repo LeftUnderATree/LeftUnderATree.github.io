@@ -266,67 +266,13 @@ hr {
   padding: 0;
 }
 
- 
-
-
-
-
-
-
-
-
 
 
 .slider-line {
   background: #e0e0e0 !important; /* или нужный цвет */
 }
 
-/* Responsive Design */
-@media (max-width: 600px) {
-  .container {
-    flex-direction: column;
-    overflow-y: visible; /* Enable vertical scrolling for the container */
-  }
 
-  .media-container,
-  .info-container {
-    width: 100%;
-    height: auto; /* Let the height be determined by the content */
-    overflow: visible; /* Remove individual scrolling */
-  }
-
-  .media-container {
-    flex: 1;
-  }
-
-  .info-container {
-    flex: 1;
-  }
-
- #project-media { 
-    gap: 0;              /* убираем расстояние между блоками */
-  }
-
-.media-item {
-    padding-bottom: 0; /* снизу 0 */
-  }
-
-  .media-description {
-    margin-bottom: 0; /* снизу 0 */
-    margin-top: 5px;
-  }
-
-  .responsive-iframe-container{
-    aspect-ratio: 16 / 9;
-    height: auto;
-    padding-bottom: 0;
-  }
-  
-  .responsive-iframe-container iframe{
-    aspect-ratio: 16 / 9;    
-    height: auto;
-  }
-}
 
 /* --- MOBILE: put project description + tags above media --- */
 @media (max-width: 600px) {
@@ -336,6 +282,30 @@ hr {
     display: grid;
     grid-template-columns: 1fr;
   }
+
+  .media-container,
+  .info-container {
+    width: 100%;
+    height: auto;
+    overflow: visible;
+  }
+
+@media (max-width: 600px) {
+
+  .responsive-iframe-container{
+    padding-bottom: calc(56%); 
+  }
+
+  .responsive-iframe-container iframe{
+    height: calc(100% - 10px);
+  }
+}
+
+
+/* но убираем нижний padding только у НЕ-видео */
+.media-item:not(.responsive-iframe-container) {
+  padding-bottom: 0;
+}
 
   /* "распаковываем" info-container, чтобы его дети стали grid-элементами */
   .info-container{
