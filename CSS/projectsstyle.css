@@ -293,7 +293,7 @@ hr {
 @media (max-width: 600px) {
 
   .responsive-iframe-container{
-    padding-bottom: calc(56%); 
+    padding-bottom: calc(56.25%); 
   }
 
   .responsive-iframe-container iframe{
