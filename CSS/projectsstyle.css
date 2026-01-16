@@ -274,7 +274,7 @@ hr {
 
 
 
-/* --- MOBILE: put project description + tags above media --- */
+/* --- MOBILE */
 @media (max-width: 600px) {
 
   /* превращаем страницу в grid */
@@ -290,21 +290,21 @@ hr {
     overflow: visible;
   }
 
-@media (max-width: 600px) {
-
   .responsive-iframe-container{
-    padding-bottom: calc(56.25%); 
+  padding-bottom: calc(56.25% - 1.25px);
   }
 
   .responsive-iframe-container iframe{
+    top: 5px;
     height: calc(100% - 10px);
+
   }
-}
+  /* mobile: reduced vertical padding to visually align iframe with images */
 
 
 /* но убираем нижний padding только у НЕ-видео */
 .media-item:not(.responsive-iframe-container) {
-  padding-bottom: 0;
+  padding: 5px 10px;
 }
 
   /* "распаковываем" info-container, чтобы его дети стали grid-элементами */
