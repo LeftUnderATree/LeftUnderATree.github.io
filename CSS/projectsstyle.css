@@ -69,8 +69,8 @@ h3 {
   justify-content: flex-start;
   align-items: stretch;
   padding: 0;
-  overflow: visible;
-  height: auto; 
+  overflow-y: auto; /* Enable vertical scrolling */
+  height: 100vh; /* Full viewport height */
   
   -webkit-overflow-scrolling: touch;
 }
@@ -100,17 +100,16 @@ h3 {
 }
 
 /* Info Container Styling */
-.info-container{
-  position: fixed;
-  top: 0;
-  right: 0;
-  width: 20%;
-  height: 100vh;
-  overflow: hidden;
+.info-container {
+  flex: 0 0 20%; /* Take up 20% of the width */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
   padding: 10px;
-  background: #e0e0e0;
+  gap: 10px;
+  overflow: hidden;
+  overflow: auto;
 }
-
 
 /* Top Container Styling */
 .top-container {
