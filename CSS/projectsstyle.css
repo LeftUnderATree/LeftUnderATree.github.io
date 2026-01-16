@@ -292,13 +292,11 @@ hr {
 
   .responsive-iframe-container{
   padding-bottom: calc(56.25% - 1.25px);
-  transform: translateZ(0);
   }
 
   .responsive-iframe-container iframe{
     top: 5px;
     height: calc(100% - 10px);
-    transform: translateZ(0);
 
   }
   /* mobile: reduced vertical padding to visually align iframe with images */
