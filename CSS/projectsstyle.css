@@ -291,7 +291,7 @@ hr {
   }
 
   .responsive-iframe-container{
-  padding-bottom: calc(56.25% - 1.5px);
+  padding-bottom: calc(56.25% - 1.4px);
   }
 
   .responsive-iframe-container iframe{
