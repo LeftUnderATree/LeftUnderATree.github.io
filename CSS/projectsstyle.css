@@ -297,6 +297,7 @@ hr {
   .responsive-iframe-container iframe{
     top: 5px;
     height: calc(100% - 10px);
+    border-radius: 0;
 
   }
   /* mobile: reduced vertical padding to visually align iframe with images */
