@@ -69,8 +69,8 @@ h3 {
   justify-content: flex-start;
   align-items: stretch;
   padding: 0;
-  overflow-y: auto; /* Enable vertical scrolling */
-  height: 100vh; /* Full viewport height */
+  overflow: visible;
+  height: auto; 
   
   -webkit-overflow-scrolling: touch;
 }
@@ -100,16 +100,17 @@ h3 {
 }
 
 /* Info Container Styling */
-.info-container {
-  flex: 0 0 20%; /* Take up 20% of the width */
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  padding: 10px;
-  gap: 10px;
+.info-container{
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 20%;
+  height: 100vh;
   overflow: hidden;
-  overflow: auto;
+  padding: 10px;
+  background: #e0e0e0;
 }
+
 
 /* Top Container Styling */
 .top-container {
@@ -297,7 +298,6 @@ hr {
   .responsive-iframe-container iframe{
     top: 5px;
     height: calc(100% - 10px);
-    border-radius: 0;
 
   }
   /* mobile: reduced vertical padding to visually align iframe with images */
