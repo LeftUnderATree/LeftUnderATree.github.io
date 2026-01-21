@@ -17,7 +17,39 @@ if (IS_TOUCH_DEVICE) {
 }
 
 if (IS_TOUCH_DEVICE) {
-  window.addEventListener("scroll", () => clearTouchHover(), { passive: true });
+  // 1) Ловим scroll вообще везде (scroll не bubble-ится, поэтому capture:true)
+  document.addEventListener(
+    "scroll",
+    () => clearTouchHover(),
+    { passive: true, capture: true }
+  );
+
+  // 2) На iOS/некоторых браузерах надежнее ещё и сбрасывать при свайпе
+  let startX = 0;
+  let startY = 0;
+
+  document.addEventListener(
+    "touchstart",
+    (e) => {
+      if (!e.touches || e.touches.length !== 1) return;
+      startX = e.touches[0].clientX;
+      startY = e.touches[0].clientY;
+    },
+    { passive: true }
+  );
+
+  document.addEventListener(
+    "touchmove",
+    (e) => {
+      if (!e.touches || e.touches.length !== 1) return;
+      const dx = Math.abs(e.touches[0].clientX - startX);
+      const dy = Math.abs(e.touches[0].clientY - startY);
+
+      // небольшой порог, чтобы не сбрасывать от микродвижений
+      if (dx > 8 || dy > 8) clearTouchHover();
+    },
+    { passive: true }
+  );
 }
 
 
