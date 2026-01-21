@@ -1,5 +1,26 @@
 // Function to create a thumbnail with overlay icons
 let gradientIndex = 0; // Глобальный счётчик для градиентов
+
+// Touch devices don't have :hover. We emulate it: first tap = hover, second tap = open.
+const IS_TOUCH_DEVICE = window.matchMedia("(hover: none) and (pointer: coarse)").matches;
+
+function clearTouchHover(exceptEl = null) {
+  document.querySelectorAll(".thumbnail.is-hovered").forEach((el) => {
+    if (el !== exceptEl) el.classList.remove("is-hovered");
+  });
+}
+
+if (IS_TOUCH_DEVICE) {
+  document.addEventListener("click", (e) => {
+    if (!e.target.closest(".thumbnail-link")) clearTouchHover();
+  });
+}
+
+if (IS_TOUCH_DEVICE) {
+  window.addEventListener("scroll", () => clearTouchHover(), { passive: true });
+}
+
+
 function createThumbnail(src, alt, galleryPageUrl, hasMultipleImages, hasVideo, hasYouTube, hasSketchfab, isLarge) {
     const thumbnailLink = document.createElement("a");
 thumbnailLink.href = galleryPageUrl;
@@ -75,6 +96,20 @@ if (isLarge) {
     thumbnailDiv.appendChild(thumbnailImg);
     thumbnailDiv.appendChild(thumbnailTitle);
     thumbnailLink.appendChild(thumbnailDiv);
+
+    // Touch-friendly "double tap" behavior:
+    // 1st tap shows hover state, 2nd tap opens the link
+    if (IS_TOUCH_DEVICE) {
+    thumbnailLink.addEventListener("click", (e) => {
+        const isHovered = thumbnailDiv.classList.contains("is-hovered");
+        if (!isHovered) {
+        e.preventDefault();
+        clearTouchHover(thumbnailDiv);
+        thumbnailDiv.classList.add("is-hovered");
+        }
+        // if hovered already -> second tap opens link normally
+    });
+    }
 
     return thumbnailLink;
 }

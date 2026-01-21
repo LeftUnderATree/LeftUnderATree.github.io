@@ -6,8 +6,8 @@ Texture Size:
 
 Texel Density: 
 
-Workflow: 
+Workflow:
 
-Target Engine: 
+Target Engine:
 
 Collaborators:

@@ -95,6 +95,16 @@
   
 }
 
+.thumbnail.is-hovered { transform: scale(1.05); }
+
+.thumbnail.is-hovered .thumbnail-title { opacity: 1; }
+
+.thumbnail.is-hovered .overlay-icon {
+  opacity: 1;
+  animation: slideInLeft 0.6s ease;
+}
+
+
 .thumbnail:hover::before {
   content: "";
   position: absolute;
@@ -106,6 +116,16 @@
   background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), #1f1f1f);
   z-index: 1;
 }
+
+.thumbnail.is-hovered::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  transition: opacity 0.5s;
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), #1f1f1f);
+  z-index: 1;
+}
+
 
 .overlay-icon {
   position: absolute;
@@ -123,6 +143,9 @@
   opacity: 1;
   animation: slideInLeft 0.5s forwards;
 }
+
+
+
 
 .overlay-icon + .overlay-icon {
   left: 40px; /* Adjust spacing between icons */
@@ -227,4 +250,16 @@
 
 
 
-
+/* Цвета градиентов .is-hovered*/
+.thumbnail.gradient-green.is-hovered::before {
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), #00b400);
+}
+.thumbnail.gradient-blue.is-hovered::before {
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), #0080ff);
+}
+.thumbnail.gradient-pink.is-hovered::before {
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), #ff4bff);
+}
+.thumbnail.gradient-orange.is-hovered::before {
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), #ff8000);
+}

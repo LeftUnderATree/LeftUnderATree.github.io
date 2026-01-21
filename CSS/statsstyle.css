@@ -1,5 +1,5 @@
 .project-stats-container {
-  padding: 0px;
+  padding: 0 0 0 10px;
 }
 
 .stat {
@@ -9,6 +9,7 @@
   color: darkgrey;
   font-size: 14px;
   margin-right: 5px;
+  margin-bottom: 10px;
   font-weight: 400;
   -webkit-user-select: none; /* Safari */
   user-select: none;
@@ -19,7 +20,7 @@
 }
 
 .triangle-icon, .material-icon, .engine-icon, .size-icon, .td-icon, .workflow-icon, .collab-icon {
-  color: #a9a9a9; /* Pastel green */
+  color: #1f1f1f; /* Pastel green */
 }
 
 .stat strong {
@@ -60,4 +61,13 @@
   border-width: 5px;
   border-style: solid;
   border-color: #333 transparent transparent transparent;
+}
+
+/* --- MOBILE */
+@media (max-width: 600px) {
+
+  .project-stats-container {
+    padding: 10px 10px 0 10px;
+  }
+
 }
