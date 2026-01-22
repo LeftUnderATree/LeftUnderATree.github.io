@@ -8,6 +8,8 @@ let didScrollGesture = false;
 let startX = 0;
 let startY = 0;
 let lastScrollTS = 0;
+let tapStartTS = 0;
+
 
 function clearTouchHover(exceptEl = null) {
   document.querySelectorAll(".thumbnail.is-hovered").forEach((el) => {
@@ -32,49 +34,6 @@ if (IS_TOUCH_DEVICE) {
   },
   { passive: true, capture: true }
 );
-
-
-
-
-  document.addEventListener(
-    "touchstart",
-    (e) => {
-      if (!e.touches || e.touches.length !== 1) return;
-      didScrollGesture = false;
-      startX = e.touches[0].clientX;
-      startY = e.touches[0].clientY;
-    },
-    { passive: true }
-  );
-
-  document.addEventListener(
-    "touchmove",
-    (e) => {
-      if (!e.touches || e.touches.length !== 1) return;
-      const dx = Math.abs(e.touches[0].clientX - startX);
-      const dy = Math.abs(e.touches[0].clientY - startY);
-
-      // небольшой порог, чтобы не сбрасывать от микродвижений
-    if (dy > 1 && dy >= dx) {
-    didScrollGesture = true;
-    lastScrollTS = Date.now();
-    clearTouchHover();
-    }
-
-
-    },
-    { passive: true }
-  );
-
-    document.addEventListener(
-    "touchend",
-    () => {
-        setTimeout(() => {
-        if (Date.now() - lastScrollTS > 500) didScrollGesture = false;
-        }, 200);
-    },
-    { passive: true }
-    );
 
 
 }
@@ -159,24 +118,74 @@ if (isLarge) {
     // Touch-friendly "double tap" behavior:
     // 1st tap shows hover state, 2nd tap opens the link
     if (IS_TOUCH_DEVICE) {
-    thumbnailLink.addEventListener("click", (e) => {
+  // Гасим обычный click на таче, чтобы он не спорил с touchend-логикой
+  thumbnailLink.addEventListener("click", (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+  });
 
-        if (didScrollGesture || (Date.now() - lastScrollTS) < 350) {
-        e.preventDefault();
-        e.stopPropagation();
-        return;
-        }
+  thumbnailLink.addEventListener(
+    "touchstart",
+    (e) => {
+      if (!e.touches || e.touches.length !== 1) return;
 
+      didScrollGesture = false;
+      startX = e.touches[0].clientX;
+      startY = e.touches[0].clientY;
+      tapStartTS = Date.now();
+    },
+    { passive: true }
+  );
 
-        const isHovered = thumbnailDiv.classList.contains("is-hovered");
-        if (!isHovered) {
-        e.preventDefault();
+  thumbnailLink.addEventListener(
+    "touchmove",
+    (e) => {
+      if (!e.touches || e.touches.length !== 1) return;
+
+      const dx = Math.abs(e.touches[0].clientX - startX);
+      const dy = Math.abs(e.touches[0].clientY - startY);
+
+      // Любое заметное движение = скролл/свайп, НЕ тап (не важно направление)
+      if (dx > 2 || dy > 2) {
+        didScrollGesture = true;
+        lastScrollTS = Date.now();
+        clearTouchHover();
+      }
+    },
+    { passive: true }
+  );
+
+  thumbnailLink.addEventListener(
+    "touchend",
+    (e) => {
+      const dt = Date.now() - tapStartTS;
+
+      // Если был свайп/скролл — ничего не делаем
+      if (didScrollGesture) return;
+
+      // Если очень долгий “тап” (скорее удержание) — тоже не считаем кликом
+      if (dt > 500) return;
+
+      // Это реальный TAP:
+      const isHovered = thumbnailDiv.classList.contains("is-hovered");
+
+      if (!isHovered) {
+        // 1-й тап: включаем hover
         clearTouchHover(thumbnailDiv);
         thumbnailDiv.classList.add("is-hovered");
-        }
-        // if hovered already -> second tap opens link normally
-    });
-    }
+        return;
+      }
+
+      // 2-й тап: открываем ссылку вручную
+      window.location.href = thumbnailLink.href;
+
+      didScrollGesture = false;
+
+    },
+    { passive: true }
+  );
+}
+
 
     return thumbnailLink;
 }
