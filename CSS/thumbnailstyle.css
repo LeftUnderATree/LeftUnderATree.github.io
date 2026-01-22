@@ -57,9 +57,7 @@
 }
 
 
-.thumbnail:hover {
-  transform: scale(1.05);
-}
+
 
 .thumbnail img {
   position: absolute;
@@ -90,10 +88,7 @@
 
 
 
-.thumbnail:hover .thumbnail-title {
-  opacity: 1;
-  
-}
+
 
 .thumbnail.is-hovered { transform: scale(1.05); }
 
@@ -105,17 +100,7 @@
 }
 
 
-.thumbnail:hover::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  transition: opacity 0.5s;
-  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), #1f1f1f);
-  z-index: 1;
-}
+
 
 .thumbnail.is-hovered::before {
   content: "";
@@ -139,10 +124,7 @@
   z-index: 2;
 }
 
-.thumbnail:hover .overlay-icon {
-  opacity: 1;
-  animation: slideInLeft 0.5s forwards;
-}
+
 
 
 
@@ -201,51 +183,66 @@
   display: block;
   width: 100%;
   height: auto;
-  
+  -webkit-tap-highlight-color: transparent;
+  touch-action: pan-y;
 }
+
+.thumbnail::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  opacity: 0;
+  transition: opacity 0.5s;
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), #1f1f1f);
+  z-index: 1;
+}
+
 
 .thumbnail-large-link {
   display: flex;
 }
   
 
-.thumbnail::before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background-image: linear-gradient(to bottom, rgba(255, 0, 0, 0), #1f1f1f);
-    opacity: 0;
-    transition: opacity 0.5s ease-in-out !important;
-    border-radius: inherit;
-    pointer-events: none;
+/* Hover effects ONLY for devices with real hover (mouse/trackpad) */
+@media (hover: hover) and (pointer: fine) {
+
+  .thumbnail:hover {
+    transform: scale(1.05);
+  }
+
+  .thumbnail:hover .thumbnail-title {
+    opacity: 1;
+  }
+
+  .thumbnail:hover .overlay-icon {
+    opacity: 1;
+    animation: slideInLeft 0.5s forwards;
+  }
+
+  .thumbnail:hover::before {
+    opacity: 1;
+  }
+
+  /* Gradient colors on hover */
+  .thumbnail.gradient-green:hover::before {
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), #00b400);
+  }
+
+  .thumbnail.gradient-blue:hover::before {
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), #0080ff);
+  }
+
+  .thumbnail.gradient-pink:hover::before {
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), #ff4bff);
+  }
+
+  .thumbnail.gradient-orange:hover::before {
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), #ff8000);
+  }
 }
 
-.thumbnail:hover::before {
-    opacity: 1;
-}
 
   
-
-
-/* Цвета градиентов */
-.thumbnail.gradient-green:hover::before {
-  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), #00b400);
-}
-
-.thumbnail.gradient-blue:hover::before {
-  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), #0080ff);
-}
-
-.thumbnail.gradient-pink:hover::before {
-  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), #ff4bff);
-}
-
-.thumbnail.gradient-orange:hover::before {
-  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), #ff8000);
-}
 
 
 
