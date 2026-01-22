@@ -4,6 +4,10 @@ let gradientIndex = 0; // Глобальный счётчик для гради�
 // Touch devices don't have :hover. We emulate it: first tap = hover, second tap = open.
 const IS_TOUCH_DEVICE = window.matchMedia("(hover: none) and (pointer: coarse)").matches;
 
+let didScrollGesture = false;
+let startX = 0;
+let startY = 0;
+
 function clearTouchHover(exceptEl = null) {
   document.querySelectorAll(".thumbnail.is-hovered").forEach((el) => {
     if (el !== exceptEl) el.classList.remove("is-hovered");
@@ -24,14 +28,13 @@ if (IS_TOUCH_DEVICE) {
     { passive: true, capture: true }
   );
 
-  // 2) На iOS/некоторых браузерах надежнее ещё и сбрасывать при свайпе
-  let startX = 0;
-  let startY = 0;
+
 
   document.addEventListener(
     "touchstart",
     (e) => {
       if (!e.touches || e.touches.length !== 1) return;
+      didScrollGesture = false;
       startX = e.touches[0].clientX;
       startY = e.touches[0].clientY;
     },
@@ -46,10 +49,23 @@ if (IS_TOUCH_DEVICE) {
       const dy = Math.abs(e.touches[0].clientY - startY);
 
       // небольшой порог, чтобы не сбрасывать от микродвижений
-      if (dx > 8 || dy > 8) clearTouchHover();
+      if (dx > 8 || dy > 8) {
+        didScrollGesture = true;
+        clearTouchHover();
+        }
+
     },
     { passive: true }
   );
+
+    document.addEventListener(
+    "touchend",
+    () => {
+        setTimeout(() => (didScrollGesture = false), 250);
+    },
+    { passive: true }
+    );
+
 }
 
 
@@ -133,6 +149,13 @@ if (isLarge) {
     // 1st tap shows hover state, 2nd tap opens the link
     if (IS_TOUCH_DEVICE) {
     thumbnailLink.addEventListener("click", (e) => {
+
+        if (didScrollGesture) {
+        e.preventDefault();
+        e.stopPropagation();
+         return;
+        }
+
         const isHovered = thumbnailDiv.classList.contains("is-hovered");
         if (!isHovered) {
         e.preventDefault();
