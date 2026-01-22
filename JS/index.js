@@ -7,6 +7,7 @@ const IS_TOUCH_DEVICE = window.matchMedia("(hover: none) and (pointer: coarse)")
 let didScrollGesture = false;
 let startX = 0;
 let startY = 0;
+let lastScrollTS = 0;
 
 function clearTouchHover(exceptEl = null) {
   document.querySelectorAll(".thumbnail.is-hovered").forEach((el) => {
@@ -23,10 +24,15 @@ if (IS_TOUCH_DEVICE) {
 if (IS_TOUCH_DEVICE) {
   // 1) Ловим scroll вообще везде (scroll не bubble-ится, поэтому capture:true)
   document.addEventListener(
-    "scroll",
-    () => clearTouchHover(),
-    { passive: true, capture: true }
-  );
+  "scroll",
+  () => {
+    lastScrollTS = Date.now();
+    didScrollGesture = true;
+    clearTouchHover();
+  },
+  { passive: true, capture: true }
+);
+
 
 
 
@@ -49,10 +55,12 @@ if (IS_TOUCH_DEVICE) {
       const dy = Math.abs(e.touches[0].clientY - startY);
 
       // небольшой порог, чтобы не сбрасывать от микродвижений
-      if (dx > 8 || dy > 8) {
-        didScrollGesture = true;
-        clearTouchHover();
-        }
+    if (dy > 1 && dy >= dx) {
+    didScrollGesture = true;
+    lastScrollTS = Date.now();
+    clearTouchHover();
+    }
+
 
     },
     { passive: true }
@@ -61,10 +69,13 @@ if (IS_TOUCH_DEVICE) {
     document.addEventListener(
     "touchend",
     () => {
-        setTimeout(() => (didScrollGesture = false), 250);
+        setTimeout(() => {
+        if (Date.now() - lastScrollTS > 500) didScrollGesture = false;
+        }, 200);
     },
     { passive: true }
     );
+
 
 }
 
@@ -150,11 +161,12 @@ if (isLarge) {
     if (IS_TOUCH_DEVICE) {
     thumbnailLink.addEventListener("click", (e) => {
 
-        if (didScrollGesture) {
+        if (didScrollGesture || (Date.now() - lastScrollTS) < 350) {
         e.preventDefault();
         e.stopPropagation();
-         return;
+        return;
         }
+
 
         const isHovered = thumbnailDiv.classList.contains("is-hovered");
         if (!isHovered) {
