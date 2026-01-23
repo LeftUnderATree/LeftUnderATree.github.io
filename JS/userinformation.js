@@ -65,7 +65,26 @@ function addUserInformation() {
 
             // Create and append the user role
             const userRole = document.createElement("h2");
-            userRole.textContent = profileRole; // Your Current Title & Studio from txt
+            userRole.className = "user-role";
+
+            const openIdx = profileRole.indexOf("(");
+            const closeIdx = profileRole.lastIndexOf(")");
+
+            if (openIdx !== -1 && closeIdx !== -1 && closeIdx > openIdx) {
+            const before = profileRole.slice(0, openIdx).trimEnd();
+            const chunkText = profileRole.slice(openIdx, closeIdx + 1).trim();
+
+            userRole.appendChild(document.createTextNode(before + " "));
+
+            const chunk = document.createElement("span");
+            chunk.className = "role-chunk";
+            chunk.textContent = chunkText;
+
+            userRole.appendChild(chunk);
+            } else {
+            userRole.textContent = profileRole;
+            }
+
             userInfoPanel.appendChild(userRole);
 
             // Create and append the location

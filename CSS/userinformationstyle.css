@@ -88,6 +88,14 @@
   margin: 0;
 }
 
+.user-role .role-chunk{
+  white-space: nowrap;
+  display: inline-block;
+  overflow-wrap: normal;
+  word-break: normal;
+}
+
+
 /* Responsive Design */
 @media (max-width: 600px) {
 .profile-pic {
