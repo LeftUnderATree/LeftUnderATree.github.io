@@ -6,9 +6,8 @@
   column-gap: 20px; /* расстояние МЕЖДУ словами (тегами) */
   row-gap: 1px;     /* расстояние МЕЖДУ строками */
 
-  padding-left: 10px;
-  padding-top: 0;
-  padding-bottom: 0;
+  padding: 0 10px;
+  padding-bottom: 10px;
 }
 
 

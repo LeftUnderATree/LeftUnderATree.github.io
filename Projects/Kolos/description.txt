@@ -2,7 +2,7 @@ Kolos
 ---
 The project presents a three-dimensional graphic video based on my father's childhood memories, which transports viewers into the atmosphere of rural life and work on a combine harvester during the Soviet Union.
 ---
-Blender, Photoshop, Premier Pro, Substance Painter, EmberGen
+Blender, Photoshop, Premier Pro, Substance Painter, EmberGen, Aseprite
 ---
 /Projects/Kolos/Img/2.jpg
 ---
