@@ -209,9 +209,8 @@ function fetchProjectData(projectName) {
         fetch(mediaPath).then(response => response.text())
     ])
     .then(([descriptionText, mediaText]) => {
-        const [title, description, tags, thumbnailUrl, htmlFileName] = descriptionText.split('---').map(line => line.trim());
+        const [title, description, tags, role, thumbnailUrl, htmlFileName] = descriptionText.split('---').map(line => line.trim());
         const galleryPageUrl = descriptionPath.replace('description.txt', htmlFileName);
-
         const mediaLines = mediaText.split('\n').map(line => line.trim()).filter(line => line && !line.startsWith('#'));
         const hasMultipleImages = mediaLines.filter(line => line.match(/\.(jpeg|jpg|gif|png)$/)).length > 1;
         const hasVideo = mediaLines.some(line => line.match(/\.(mp4)$/));

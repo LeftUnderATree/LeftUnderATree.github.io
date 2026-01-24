@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
         try {
             const response = await fetch('description.txt');
             const text = await response.text();
-            const [title, description, tags] = text.split('---').map(line => line.trim());
+            const [title, description, tags, role] = text.split('---').map(line => line.trim());
             document.getElementById('project-title').textContent = title;
             document.title = title; // Set the document title as well
     
@@ -53,6 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
     
             renderTags(tags);
+            document.getElementById('project-role').textContent = role || '';
         } catch (error) {
             console.error('Error loading project description:', error);
         }
@@ -449,7 +450,7 @@ document.addEventListener('DOMContentLoaded', () => {
         try {
             const response = await fetch(`../${folder}/description.txt`);
             const text = await response.text();
-            const htmlFileName = text.split('---')[4].trim();
+            const htmlFileName = text.split('---').map(x => x.trim()).pop();
             const file = encodeURIComponent(htmlFileName);
             window.location.href = `../${folder}/${file}`;
         } catch (error) {
