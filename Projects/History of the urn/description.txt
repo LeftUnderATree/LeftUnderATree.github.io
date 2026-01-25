@@ -1,12 +1,11 @@
-History of the urn
+History of the Urn
 ---
-I have researched trash can design, interviewed garbage collectors and people who dispose of garbage, submitted applications for the installation of trash cans, and filed complaints about their absence. I independently installed a series of trash collection containers. This abstract 3D video is a representation of the path I have taken
-This is also one of my university projects
+History of the Urn is a 3D social-commentary short inspired by my research into urban waste systems. As trash begins falling from the sky, a lone driver tries to push the city to act—only to face an absurd bureaucracy that looks busy, but does nothing.
 ---
 Blender, Photoshop, Krita, Premier Pro
 ---
-
+Director & CG Generalist (3D Short Film)
 ---
-/Projects/History of the urn/Img/4.jpg
+/Projects/History of the Urn/Img/4.jpg
 ---
-History of the urn.html
+History of the Urn.html

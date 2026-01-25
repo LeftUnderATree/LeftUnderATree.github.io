@@ -4,7 +4,7 @@ A collection of five stylized mid-century props, optimized for real-time applica
 ---
 Blender, Substance Painter, Photoshop
 ---
-
+Prop Artist (Modeling + UV + PBR Texturing)
 ---
 /Projects/Mid-Century Prop Pack/Img/AllModelsCover.jpg
 ---

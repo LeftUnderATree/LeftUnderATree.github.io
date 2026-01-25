@@ -6,14 +6,12 @@
   column-gap: 20px; /* расстояние МЕЖДУ словами (тегами) */
   row-gap: 1px;     /* расстояние МЕЖДУ строками */
 
-  padding: 0 10px;
-  padding-bottom: 10px;
 }
 
 
 .software-tag {
   background-color: #e0e0e0;
-  color: darkgray;
+  color: #808080;
   padding: 0px 0px;
   border-radius: 0.25em;
   font-size: 14px;

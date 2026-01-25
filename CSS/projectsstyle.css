@@ -56,7 +56,6 @@ h3 {
   font-weight: 100;
   -webkit-user-select: none; /* Standard property */
   user-select: none; /* Safari and iOS support */
-  padding-left: 10px;
   margin-bottom: 5px;
 }
 
@@ -123,6 +122,10 @@ h3 {
   padding: 10px;
 }
 
+.software-block {
+  padding: 0 10px 10px;
+}
+
 .project-description-container h1 {
   font-size: 16px;
   margin: 0;
@@ -149,6 +152,11 @@ h3 {
   user-select: none; /* Safari and iOS support */
 }
 
+.role-block {
+padding: 0 10px 10px;
+}
+
+
 /* Role block */
 .role-block p {
   font-size: 14px;
@@ -156,7 +164,6 @@ h3 {
   color: grey;
   font-family: 'Poppins', sans-serif;
   font-weight: 400;
-  padding-left: 10px; /* чтобы визуально совпадало с h3 */
   -webkit-user-select: none;
   user-select: none;
 }
@@ -350,7 +357,7 @@ hr {
   }
   
   #project-tags{
-    padding: 0px 10px;
+    padding: 0px 0px;
   }
 
     .top-container {

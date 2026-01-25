@@ -4,7 +4,7 @@ Cursed Path is a PS1-style survival horror vertical slice. The game features fiv
 ---
 Unity, Blender, Photoshop
 ---
-
+Solo Game Developer (Game Design + Level Design + Production)
 ---
 /Projects/Cursed Path/Img/CursedPath0.jpg
 ---
