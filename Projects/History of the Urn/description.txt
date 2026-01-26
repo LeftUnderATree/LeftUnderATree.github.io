@@ -1,8 +1,8 @@
 History of the Urn
 ---
-The project presents a three-dimensional graphic video based on my father's childhood memories, which transports viewers into the atmosphere of rural life and work on a combine harvester during the Soviet Union.
+History of the Urn is a 3D social-commentary short inspired by my research into urban waste systems. As trash begins falling from the sky, a lone driver tries to push the city to act—only to face an absurd bureaucracy that looks busy, but does nothing.
 ---
-Blender, Photoshop, Premier Pro, Substance Painter, EmberGen, Aseprite
+Blender, Photoshop, Krita, Premier Pro
 ---
 Director & CG Generalist (3D Short Film)
 ---
