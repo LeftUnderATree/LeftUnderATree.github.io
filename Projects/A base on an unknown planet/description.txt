@@ -1,10 +1,10 @@
 A base on an unknown planet
 ---
-For a long time I wanted to create something related to space, with wonderful, as yet unknown, planets that humanity will visit. From this desire, this project was born.
+A cinematic sci-fi environment study focused on scale, mood, and visual storytelling. Built as a cohesive scene with atmospheric lighting, material work, and composition aimed at a “first contact” feeling.
 ---
 Blender, Photoshop
 ---
-Solo 3D Artist (Environment & Lookdev)
+Solo 3D Artist (Environment, Lighting, Lookdev)
 ---
 /Projects/A base on an unknown planet/Img/SrtangePlanetAndABuilding.jpg
 ---

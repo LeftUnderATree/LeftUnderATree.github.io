@@ -1,10 +1,10 @@
 Kolos
 ---
-The project presents a three-dimensional graphic video based on my father's childhood memories, which transports viewers into the atmosphere of rural life and work on a combine harvester during the Soviet Union.
+A 3D short film based on my father’s childhood memories, recreating rural Soviet life through atmosphere, rhythm, and detail. From directing and storytelling to animation, environments, VFX, editing, and final polish — the piece is crafted as a personal, cinematic tribute.
 ---
 Blender, Photoshop, Premier Pro, Substance Painter, EmberGen, Aseprite
 ---
-Director & CG Generalist (3D Short Film)
+Director, CG Generalist (Direction, 3D, Edit)
 ---
 /Projects/Kolos/Img/2.jpg
 ---

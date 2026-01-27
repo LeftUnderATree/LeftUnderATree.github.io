@@ -1,10 +1,10 @@
 Underwater
 ---
-A surreal dive into a synthetic abyss, this series visualizes a vast digital ocean built from light and geometry—where depth feels infinite, structures drift like currents, and the familiar laws of nature dissolve into abstract motion.
+A surreal dive into a synthetic abyss — a visual series built from light, geometry, and depth. The goal was to make scale feel infinite, with structures drifting like currents and reality slowly dissolving into abstract motion.
 ---
 Blender, Photoshop
 ---
-Solo 3D Artist (Visual Concept + Lookdev)
+Solo 3D Artist (Visual Concept, Lookdev)
 ---
 /Projects/Underwater/Img/Cube.jpg
 ---

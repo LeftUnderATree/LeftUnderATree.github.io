@@ -1,11 +1,10 @@
 Techno-Pharmacy Cross
 ---
-Inspired by some videos on the Internet.
-Thanks for stopping by!
+Techno-Pharmacy Cross is a stylized 3D motion piece inspired by the “techno pharmacy signs” trend — hypnotic LED crosses synced to drum & bass / rave energy. I rebuilt the concept in my own visual language, focusing on tight rhythm, graphic readability, and punchy light choreography.
 ---
 Blender, Photoshop, Krita
 ---
-Solo CG Artist (Direction + 3D + Edit)
+Solo CG Artist (Direction, 3D, Edit)
 ---
 /Projects/Techno-Pharmacy Cross/Img/0000.jpg
 ---

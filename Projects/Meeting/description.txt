@@ -1,10 +1,10 @@
 Meeting
 ---
-The conference room of the secret organization and its last representative.
+A cinematic environment scene: the conference room of a secret organization — and its last representative. Focused on composition, lighting, and narrative props to imply a larger story without dialogue.
 ---
 Blender, Photoshop
 ---
-Solo 3D Artist (Environment + Lighting / Lookdev)
+Solo 3D Artist (Environment, Lighting, Lookdev)
 ---
 /Projects/Meeting/Img/3.jpg
 ---

@@ -1,11 +1,10 @@
 Space
 ---
-A cinematic sci-fi series exploring isolation and scale through the journey of an astronaut drifting near the rings of a distant gas giant. 
-With bold lighting, sweeping compositions, and stylized environments, the project blends realism and surrealism to capture the quiet tension between humanity and the vast unknown.
+A cinematic sci-fi series exploring isolation and scale through an astronaut drifting near the rings of a distant gas giant. Built around bold lighting, strong composition, and a surreal-realistic mood that sells quiet tension and vastness.
 ---
 Blender, Photoshop
 ---
-Solo 3D Artist (Environment & Lookdev)
+Solo CG Artist (Direction, 3D, Edit)
 ---
 /Projects/Space/Img/8.jpg
 ---
