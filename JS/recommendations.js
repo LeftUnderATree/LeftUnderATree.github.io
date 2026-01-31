@@ -161,15 +161,47 @@ document.addEventListener("DOMContentLoaded", async () => {
 
         // Adjust height to ensure dots are always visible
         function adjustHeight() {
-            const activeRecommendation = document.querySelector('.recommendation.active');
-            if (activeRecommendation) {
-                const activeHeight = activeRecommendation.getBoundingClientRect().height;
-                recommendationContent.style.minHeight = `${activeHeight + 60}px`; // Add space for dots
-            }
+        // временно показываем все рекомендации, чтобы корректно измерить высоту
+        recommendationsElements.forEach(el => {
+            el.style.display = 'flex';
+            el.style.position = 'relative';
+            el.style.opacity = '1';
+            el.style.visibility = 'visible';
+        });
+
+        let maxH = 0;
+        recommendationsElements.forEach(el => {
+            const h = el.getBoundingClientRect().height;
+            if (h > maxH) maxH = h;
+        });
+
+        // возвращаем обратно: неактивные скрыты
+        recommendationsElements.forEach((el, i) => {
+            el.style.display = '';
+            el.style.position = '';
+            el.style.opacity = '';
+            el.style.visibility = '';
+        });
+
+        const extra = window.matchMedia('(max-width: 600px)').matches ? 10 : 30;
+        const target = Math.ceil(maxH + extra);
+
+        recommendationContent.style.height = `${target}px`;
+        recommendationContent.style.minHeight = `${target}px`;
+        recommendationContent.style.maxHeight = `${target}px`;
+
         }
+
 
         window.addEventListener('resize', adjustHeight);
         adjustHeight(); // Initial call to set height
+
+        window.addEventListener('load', adjustHeight);
+
+        recommendationContent.querySelectorAll('img').forEach(img => {
+        img.addEventListener('load', adjustHeight);
+        });
+
 
         // Автоматическая смена рекомендаций каждые 8 секунд
     setInterval(() => {

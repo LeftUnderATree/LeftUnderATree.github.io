@@ -12,7 +12,7 @@ html, body {
 }
 
 body {
-    font-family: Montserrat, sans-serif;
+    font-family: 'Poppins', sans-serif;
     background-color: #e0e0e0;
     color: #1f1f1f;
     display: flex;
@@ -88,7 +88,7 @@ hr {
 }
 
 .panel-title {
-    font-size: 24px;
+    font-size: 20px;
     margin-bottom: 10px;
     color: #1f1f1f;
     text-align: left; /* Align panel titles to the left */
@@ -100,8 +100,29 @@ p {
     color: grey;
 }
 
+
 .summary-panel p {
     text-align: justify;
+}
+
+.corefocus-panel p {
+    text-align: justify;
+}
+
+
+
+.summary-panel p,
+.corefocus-panel p {
+    margin: 0;
+}
+
+
+.summary-panel + .panel-title {
+    margin-top: 40px; /* расстояние между Summary и Core focus */
+}
+
+.corefocus-panel + .panel-title {
+    margin-top: 40px;
 }
 
 .navigation-buttons {
@@ -162,7 +183,7 @@ p {
 
     .panel-title {
         font-size: 20px; /* Adjust font size for panel titles on mobile */
-        text-align: center; /* Center align panel titles for better presentation on mobile */
+        /* text-align: center;  Center align panel titles for better presentation on mobile */
     }
 
     p {
@@ -180,5 +201,14 @@ p {
         padding: 8px; /* Reduce padding for better fit on mobile */
         margin-right: 0; /* Remove margin for better fit on mobile */
         border-radius: .5em .5em 0 0; /* Adjust border radius for better look on mobile */
+    }
+
+
+        .summary-panel + .panel-title {
+        margin-top: 20px; /* расстояние между Summary и Core focus */
+    }
+
+    .corefocus-panel + .panel-title {
+        margin-top: 20px;
     }
 }

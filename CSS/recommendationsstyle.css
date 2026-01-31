@@ -4,7 +4,7 @@
     flex-grow: 1;
     position: relative;
     width: 100%;
-    min-height: 350px;
+    min-height: 0px;
     overflow: hidden;
 }
 
@@ -12,7 +12,7 @@
     width: 100%;
     display: none;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: flex-start;
     text-align: left;
     transition: opacity 0.5s ease, transform 0.5s ease;
@@ -50,7 +50,6 @@
 .recommendations-panel {
     background-color: #e0e0e0;
     border-radius: 5px;
-    padding: 10px;
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -83,7 +82,7 @@
 
 .recommendation-quote {
     font-size: 16px;
-    margin: 10px 0;
+    margin: 0 0 10px 0;
     color: grey;
     line-height: 1.5;
 }
@@ -91,7 +90,7 @@
 .recommendation-dots {
     display: flex;
     gap: 10px;
-    padding: 10px;
+    margin-bottom: 10px;
 }
 
 .dot {
@@ -112,16 +111,17 @@
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
-        min-height: 450px; /* Adjust the minimum height for mobile */
+        min-height: 0px; /* Adjust the minimum height for mobile */
         position: relative; /* Add relative positioning */
-        padding-bottom: 60px; /* Ensure enough space for dots */
+        padding-bottom: 0px; /* Ensure enough space for dots */
     }
 
     .recommendation {
         transition: transform 0.5s ease, opacity 0.5s ease;
         flex-grow: 1;
-        margin-bottom: 60px; /* Add margin to create space for dots */
+        margin-bottom: 0px; /* Add margin to create space for dots */
         position: absolute;
+        justify-content: flex-start;
         width: 100%;
         top: 0;
         left: 0;
@@ -191,7 +191,7 @@
         width: 80px; /* Smaller avatar size for mobile */
         height: 80px; /* Smaller avatar size for mobile */
         margin-right: 10px; /* Adjust margin for better spacing on mobile */
-        margin-left: 10px;
+        /* margin-left: 10px; */
     }
 
     .recommendation h2 {
@@ -214,7 +214,7 @@
     }
 
     .recommendations-panel {
-        padding: 8px; /* Adjust padding for mobile */
+        padding: 0; /* Adjust padding for mobile */
     }
 
     .dot {

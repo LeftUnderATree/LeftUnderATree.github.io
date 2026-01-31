@@ -1,10 +1,8 @@
-Blender 
-Adobe Photoshop
-Aseprite
-Adobe Premier Pro
-Unity 
-Substance 3D Painter
-Visual Novel Maker
-Krita
 Unreal Engine
-TouchDesigner
+Unity
+Blender
+Substance 3D Painter
+Adobe Photoshop
+Adobe Premier Pro
+Aseprite
+Krita

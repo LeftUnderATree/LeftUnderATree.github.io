@@ -19,7 +19,8 @@ function createProductionCard(title, company, time, thumbnail, description) {
 
     const timeElem = document.createElement("p");
     timeElem.textContent = time;
-    timeElem.style.fontStyle = "italic"; // Inline style for italic text
+    timeElem.classList.add("production-time");
+    // timeElem.style.fontStyle = "italic"; // Inline style for italic text
 
     // Append text elements to the detailsDiv
     detailsDiv.appendChild(titleElem);

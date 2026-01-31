@@ -5,23 +5,23 @@
 Freelance 3D Artist
 Self-employed
 2022 – Present
-/Resources/Productions Img/Self-employed.jpg
-I’ve worked with indie game studios, animation directors, and commercial clients to deliver stylized and realistic 3D content. Projects include character and prop modeling, animated shorts, and product visualizations.
+/Resources/Productions Img/1.jpg
+I work across real-time and offline 3D, delivering production-ready assets and cinematic visuals for games, short-form films, and product/brand renders — from modelling and PBR texturing to lighting/lookdev and final presentation.
 ---
 Lead 3D Designer
 Solarsense
-2024 – Present
-/Resources/Productions Img/Solarsense.jpg
-At Solarsense, I lead the 3D design direction for immersive exhibition spaces and commercial installations. I develop spatial concepts, create high-end visualizations, and coordinate with architectural and marketing teams to deliver fully realized presentations and visuals.
+2024 – 2026
+/Resources/Productions Img/2.jpg
+Lead 3D direction for immersive exhibition spaces and commercial installations. Built scenes from scratch or refine architect-provided layouts when needed, then own the full visual polish — materials/lookdev, lighting, composition, and final frame quality — delivering presentation-ready visuals under tight deadlines.
 ---
 3D Graphics Lecturer
 Higher School of Economics (University)
 2023 – 2024
-/Resources/Productions Img/HSE University.jpg
-As a 3D Lecturer at one of the top design universities in Russia, I taught both entry-level and advanced 3D courses using Blender. I worked with prospective students, first-year undergrads, and gave specialized lectures for senior design students. My focus was on 3D modeling, rendering, and helping students build competitive portfolios.
+/Resources/Productions Img/3.jpg
+Taught and mentored student groups in Blender: designed module projects and final assignments, provided hands-on technical support, and gave structured feedback — helping students deliver polished final work.
 ---
 Junior 3D Artist
 FIBRA Interactive
 2021
-/Resources/Productions Img/FIBRA Interactive.jpg
-Worked in an indie studio on a sci-fi puzzle game as a Junior 3D Artist. Responsible for modeling props, textures, and level dressing. Collaborated with Unity devs and senior artists to ensure visual consistency and performance optimization.
+/Resources/Productions Img/4.jpg
+Created game-ready props and environment assets for a sci-fi puzzle title: modelling, clean UVs, and PBR texturing. Worked closely with the Unity team to ensure consistent style, readability, and performance in-engine.

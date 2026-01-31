@@ -1,13 +1,12 @@
 .skills-panel {
     background-color: #e0e0e0;
     border-radius: 5px;
-    padding: 10px;
     flex: 1;
     display: flex;
     flex-direction: column;
     align-items: flex-start; /* Align items to the start (left) */
     text-align: left; /* Align text to the left */
-    margin-bottom: 20px;
+    margin-bottom: 0px;
     -webkit-user-select: none; /* Safari */
     user-select: none;
 }
@@ -20,8 +19,6 @@
     display: flex;
     flex-direction: column; /* Keep the title on top and tags below */
     align-items: flex-start; /* Align items to the start (left) */
-    gap: 10px; /* Space between the title and the tag list */
-    padding: 10px;
     border-radius: 5px;
     width: 100%; /* Ensure it takes full width of its parent */
 }
@@ -34,20 +31,24 @@
     width: 100%;
 }
 
+.skills-panel .software-tag-container + .panel-title {
+  margin-top: 40px;
+}
+
 .software-tag:nth-child(4n + 1) {
-    background-color: #ff4bff;
+    border-color: #ff4bff;
 }
 
 .software-tag:nth-child(4n + 2) {
-    background-color: #00b400;
+    border-color: #00b400;
 }
 
 .software-tag:nth-child(4n + 3) {
-    background-color: #0080ff;
+    border-color: #0080ff;
 }
 
 .software-tag:nth-child(4n + 4) {
-    background-color: #ff8000;
+    border-color: #ff8000;
 }
 
 .software-tag {
@@ -55,9 +56,20 @@
     padding: 5px 10px;
     border-radius: .25em;
     font-size: 14px;
-    white-space: nowrap; /* Prevent tags from breaking into multiple lines */
+    white-space: nowrap;
+
+    background: transparent;      /* вместо заливки */
+    border: 2px solid;            /* цвет придёт из border-color выше */
+    box-sizing: border-box;
 }
+
 
 hr {
     opacity: .05;
+}
+
+@media (max-width: 600px) {
+  .skills-panel .software-tag-container + .panel-title {
+    margin-top: 20px;
+  }
 }
