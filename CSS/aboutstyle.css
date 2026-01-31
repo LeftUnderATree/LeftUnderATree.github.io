@@ -102,11 +102,11 @@ p {
 
 
 .summary-panel p {
-    text-align: justify;
+    text-align: left;
 }
 
 .corefocus-panel p {
-    text-align: justify;
+    text-align: left;
 }
 
 
@@ -114,6 +114,7 @@ p {
 .summary-panel p,
 .corefocus-panel p {
     margin: 0;
+    
 }
 
 
