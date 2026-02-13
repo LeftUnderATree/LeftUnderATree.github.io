@@ -71,7 +71,7 @@ hr {
 }
 
 .bottom-container {
-    flex: 1; /* Take up remaining space */
+    /* flex: 1; /* Take up remaining space */
     display: flex;
     flex-direction: column;
     align-items: center;
