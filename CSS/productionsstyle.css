@@ -133,7 +133,7 @@
     }
 
     .production-subpanel h2 {
-        font-size: 14px; /* Adjust font size for mobile */
+        font-size: 16px; /* Adjust font size for mobile */
     }
 
     .production-subpanel p {
@@ -142,7 +142,7 @@
 
     .productions-subpanels > .panel-title {
         width: 90%;
-        margin: 0 5% 20px; /* слева/справа как у horizontal-container */
+        margin: 0 5% 10px; /* слева/справа как у horizontal-container */
     }
 
     .panel-title {
