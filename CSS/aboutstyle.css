@@ -128,7 +128,7 @@ p {
 
 .navigation-buttons {
     display: flex;
-    gap: 1rem;
+    gap: 0.5rem;
     justify-content: center; /* Ensure buttons are centered */
     padding-bottom: 0; /* No padding at the bottom */
 }
@@ -141,7 +141,6 @@ p {
     text-decoration: none;
     cursor: pointer;
     padding: 10px;
-    margin-right: 10px;
     font-size: 14px;
     border-radius: .9em .9em 0 0;
     transition: ease 0.5s;
@@ -163,7 +162,7 @@ p {
     }
 
     h2 {
-        font-size: 14px; /* Smaller font size for subheadings on mobile */
+        font-size: 16px; /* Smaller font size for subheadings on mobile */
         text-align: center; /* Center align subheadings for better presentation on mobile */
     }
 
@@ -198,7 +197,7 @@ p {
     }
 
     .nav-button {
-        font-size: 12px; /* Adjust font size for navigation buttons on mobile */
+        font-size: 14px; /* Adjust font size for navigation buttons on mobile */
         padding: 8px; /* Reduce padding for better fit on mobile */
         margin-right: 0; /* Remove margin for better fit on mobile */
         border-radius: .5em .5em 0 0; /* Adjust border radius for better look on mobile */
