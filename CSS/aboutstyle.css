@@ -88,14 +88,14 @@ hr {
 }
 
 .panel-title {
-    font-size: 20px;
+    font-size: 16px;
     margin-bottom: 10px;
     color: #1f1f1f;
     text-align: left; /* Align panel titles to the left */
 }
 
 p {
-    font-size: 16px;
+    font-size: 14px;
     line-height: 1.4;
     color: grey;
 }
@@ -182,7 +182,7 @@ p {
     }
 
     .panel-title {
-        font-size: 20px; /* Adjust font size for panel titles on mobile */
+        font-size: 16px; /* Adjust font size for panel titles on mobile */
         /* text-align: center;  Center align panel titles for better presentation on mobile */
     }
 
