@@ -6,22 +6,22 @@ Freelance 3D Artist
 Self-employed
 2022 – Present
 /Resources/Productions Img/1.jpg
-I work across real-time and offline 3D, delivering production-ready assets and cinematic visuals for games, short-form films, and product/brand renders — from modelling and PBR texturing to lighting/lookdev and final presentation.
+Delivered real-time and offline 3D assets for indie games, cinematics, and product visuals, covering environment and prop modeling, UVs, baking, PBR texturing, lighting, lookdev, and final polish. Integrated assets into Unity/Unreal with performance-aware scene setup and prepared trailer-ready presentations. Some projects are under NDA.
 ---
 Lead 3D Designer
 Solarsense
 2024 – 2025
 /Resources/Productions Img/2.jpg
-Lead 3D direction for immersive exhibition spaces and commercial installations. Built scenes from scratch or refine architect-provided layouts when needed, then own the full visual polish — materials/lookdev, lighting, composition, and final frame quality — delivering presentation-ready visuals under tight deadlines.
+Led 3D direction for immersive exhibition and commercial installations from concept to production-ready packages, defining spatial layouts and visual narratives while producing keyframes, walkthroughs, and stakeholder presentation materials. Collaborated with architects and production teams under tight deadlines, built reusable asset systems, and handled client-facing work on-site and remotely. Projects are under NDA.
 ---
 3D Graphics Lecturer
 Higher School of Economics (University)
 2023 – 2024
 /Resources/Productions Img/3.jpg
-Taught and mentored student groups in Blender: designed module projects and final assignments, provided hands-on technical support, and gave structured feedback — helping students deliver polished final work.
+Taught Blender-based 3D courses covering modeling, lighting, and rendering for design students, mentoring projects to portfolio-ready quality through structured feedback. Developed assignments and production-focused workflows, while strengthening students’ composition, visual storytelling, and final polish skills.
 ---
 Junior 3D Artist
 FIBRA Interactive
 2021
 /Resources/Productions Img/4.jpg
-Created game-ready props and environment assets for a sci-fi puzzle title: modelling, clean UVs, and PBR texturing. Worked closely with the Unity team to ensure consistent style, readability, and performance in-engine.
+Supported the art team in creating game-ready props and environment assets, handling modeling, UV mapping, baking, and basic PBR texturing for real-time use. Prepared clean exports, assisted with Unity setup, and iterated based on visual direction and performance requirements.
