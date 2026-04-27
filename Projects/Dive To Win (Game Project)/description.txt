@@ -6,6 +6,6 @@ Unreal Engine 5, Aseprite, Blender, Krita
 ---
 Solo Game Developer (Game Design, Implementation)
 ---
-/Projects/Dive To Win (Game Project)/Img/Oblojka.jpg
+/Projects/Dive To Win (Game Project)/Img/Oblojka0.jpg
 ---
 Dive To Win (Game Project).html
