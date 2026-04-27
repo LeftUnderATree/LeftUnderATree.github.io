@@ -4,7 +4,7 @@ xxx
 ---
 Unreal Engine 5
 ---
-Solo 3D Artist (Visual Concept, Lookdev)
+Lighting Artist (Relighting, Lookdev)
 ---
 /Projects/Seaside Town (Relighting)/Img/Seaside0.jpg
 ---

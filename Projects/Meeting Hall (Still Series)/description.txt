@@ -4,7 +4,7 @@ A cinematic environment scene: the conference room of a secret organization — 
 ---
 Blender, Photoshop
 ---
-Solo 3D Artist (Environment, Lighting, Lookdev)
+3D Artist (Environment, Lighting, Lookdev)
 ---
 /Projects/Meeting Hall (Still Series)/Img/3.jpg
 ---
