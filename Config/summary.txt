@@ -1,5 +1,5 @@
-Real-time 3D Artist / CG Generalist creating production-ready environments and cinematic shots for games and interactive experiences. Strong in environment art, lighting & lookdev, composition, and visual storytelling — from asset creation to polished final shots. Focused on readability, performance, and consistent art direction, with confidence across art + tech workflows (materials/shaders, UVs, iteration, final presentation).
+Environment & Lighting Artist creating atmospheric real-time environments and cinematic 3D shots for games, animation, and interactive experiences. I build scenes from blockout to final presentation, focusing on composition, lighting, look development, set dressing, readability, and performance. My work combines artistic direction with production-ready workflows, helping scenes feel clear, polished, and emotionally engaging in Unreal Engine, Unity, and Blender.
 
 ---
 
-Environment Art · Lighting/Lookdev · Unreal/Unity · Real-time Optimization · Cinematics
+Environment Art · Lighting/Lookdev · Real-time Cinematics · Unreal Engine · Unity · Blender

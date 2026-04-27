@@ -230,22 +230,18 @@ hr {
 
 .link-button {
   display: inline-block;
-    color: rgb(20, 20, 20);
-    background-color: #0080ff;
-    padding: 0 10px;
+    color: #0080ff;
     border-radius: 2px;
     cursor: pointer;
     text-decoration: none;
     text-align: center;
-    margin-top: 10px;
     transition: color 0.3s;
-    opacity: 0.5;
+    opacity: 1;
 }
 
 .link-button:hover {
   opacity: 1;
   color: #ff4bff;
-  background-color: #e0e0e0;
 }
 
 

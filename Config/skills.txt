@@ -1,9 +1,9 @@
 Environment Art
+Lighting / Lookdev
 Level Art / World Building
 Set Dressing
-3D Modelling
+3D Modeling
 PBR Texturing
-Lighting / Lookdev
 UV-Unwrapping
 Composition / Cinematic Framing
 Real-time Optimization

@@ -1,8 +1,8 @@
 Medieval Ruins (Relighting)
 ---
-xxx
+Dark medieval ruins relighting study focused on torchlit atmosphere, fully dynamic lighting, and cinematic contrast using Lumen and Hardware Ray Tracing. Environment by Scans Factory (https://fab.com/s/e2e087dfeed9).
 ---
-Unreal Engine 5
+Unreal Engine 5.5.4
 ---
 Lighting Artist (Relighting, Lookdev)
 ---

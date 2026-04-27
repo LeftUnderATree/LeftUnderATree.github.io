@@ -3,6 +3,6 @@ Unity
 Blender
 Substance 3D Painter
 Adobe Photoshop
-Adobe Premier Pro
+Adobe Premiere Pro
 Aseprite
 Krita

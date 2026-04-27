@@ -1,8 +1,8 @@
 Sci-Fi Interior (Relighting)
 ---
-xxx
+Moody sci-fi interior relighting study focused on industrial atmosphere, contrast, and mixed static/dynamic lighting. Environment by Jonathon Frederick (https://fab.com/s/e15eb52f6512).
 ---
-Unreal Engine 5
+Unreal Engine 5.5.4
 ---
 Lighting Artist (Relighting, Lookdev)
 ---
