@@ -1,0 +1,11 @@
+Dive To Win (Game Project)
+---
+A 2D underwater platformer prototype built around fluid movement and level pacing. The descent takes the player from bright coral zones into darker, harsher biomes, gradually introducing hazards, structures, and rhythm-based traversal.
+---
+Unreal Engine 5, Aseprite, Blender, Krita
+---
+Solo Game Developer (Game Design, Implementation)
+---
+/Projects/Dive To Win (Game Project)/Img/Oblojka.jpg
+---
+Dive To Win (Game Project).html

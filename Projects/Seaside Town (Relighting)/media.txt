@@ -1,0 +1,21 @@
+/Img/Seaside1.jpg
+
+/Img/Seaside2.jpg
+
+/Img/Seaside3.jpg
+
+/Img/Seaside4.jpg
+
+/Img/Seaside5.jpg
+
+/Img/Seaside6.jpg
+
+/Img/Seaside7.jpg
+
+/Img/Seaside8.jpg
+
+/Img/Seaside9.jpg
+
+/Img/Seaside10.jpg
+
+/Img/Seaside1.jpg // Img/Seaside6.jpg

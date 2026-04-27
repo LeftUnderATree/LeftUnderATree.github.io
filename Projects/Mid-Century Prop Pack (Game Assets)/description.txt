@@ -1,0 +1,11 @@
+Mid-Century Prop Pack (Game Assets)
+---
+A game-ready prop set of five stylized mid-century assets designed for real-time use. Clean topology, efficient UVs, and a unified 2K texture workflow — optimized for readability, performance, and consistent art direction.
+---
+Blender, Substance Painter, Photoshop
+---
+Prop Artist (Modeling, UVs, PBR Texturing)
+---
+/Projects/Mid-Century Prop Pack (Game Assets)/Img/AllModelsCover.jpg
+---
+Mid-Century Prop Pack (Game Assets).html

@@ -1,0 +1,11 @@
+Cursed Path (Game Project)
+---
+A PS1-style survival-horror vertical slice built in Unity, centered on tension, readability, and atmosphere. Features five enemy archetypes, a two-phase boss fight, audio-driven navigation, and a minimalist contextual HUD that appears only when needed.
+---
+Unity, Blender, Photoshop
+---
+Solo Game Developer (Game Design, Level Design, Production)
+---
+/Projects/Cursed Path (Game Project)/Img/CursedPath0.jpg
+---
+Cursed Path (Game Project).html
