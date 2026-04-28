@@ -1,6 +1,6 @@
 Seaside Town (Relighting)
 ---
-Seaside town relighting study exploring two contrasting moods: moody night and warm sunset. Focused on atmosphere, color contrast, and mixed static/dynamic lighting. Environment by Matima Studio (https://fab.com/s/930fa6836340).
+Seaside town relighting study exploring two contrasting moods: moody night and warm sunset. Focused on atmosphere, color contrast, and mixed static/dynamic lighting. Environment by Matima Studio: https://fab.com/s/930fa6836340
 ---
 Unreal Engine 5.5.4
 ---

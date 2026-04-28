@@ -1,6 +1,6 @@
 Subway Sequencer (Relighting)
 ---
-Cinematic relighting study focused on character lighting, environment atmosphere, and shot composition. Environment by Epic Games (https://fab.com/s/080885262a82).
+Cinematic relighting study focused on character lighting, environment atmosphere, and shot composition. Environment by Epic Games: https://fab.com/s/080885262a82
 ---
 Unreal Engine 5.5.4
 ---
