@@ -2,4 +2,4 @@ Environment & Lighting Artist creating atmospheric real-time environments and ci
 
 ---
 
-Environment Art · Lighting/Lookdev · Real-time Cinematics · Unreal Engine · Unity · Blender
+Environment Art · Lighting / LookDev · Real-Time Cinematics · Set Dressing · Composition · Visual Storytelling

@@ -2,26 +2,26 @@
 # When you add one then productions.js will automatically add it after saving
 # Format: Title, Company, Time, Thumbnail URL, Description 
 ---
-Freelance 3D Artist
-Self-employed
+Freelance Environment & Lighting Artist
+Self-Employed
 2022 – Present
 /Resources/Productions Img/1.jpg
-Delivered real-time and offline 3D assets for indie games, cinematics, and product visuals, covering environment and prop modeling, UVs, baking, PBR texturing, lighting, lookdev, and final polish. Integrated assets into Unity/Unreal with performance-aware scene setup and prepared trailer-ready presentations. Some projects are under NDA.
+As a freelance Environment & Lighting Artist, I create atmospheric 3D scenes, props, and cinematic shots for games, product visuals, exhibitions, and personal projects. My work covers the full process from blockout and asset integration to modeling, UVs, baking, texturing, lighting, look development, set dressing, rendering, and final polish. I focus on clear composition, strong mood, readable environments, and polished presentation, preparing final renders, breakdowns, turntables, and trailer-ready shots for clients and portfolio projects. 
 ---
 Lead 3D Designer
 Solarsense
 2024 – 2025
 /Resources/Productions Img/2.jpg
-Led 3D direction for immersive exhibition and commercial installations from concept to production-ready packages, defining spatial layouts and visual narratives while producing keyframes, walkthroughs, and stakeholder presentation materials. Collaborated with architects and production teams under tight deadlines, built reusable asset systems, and handled client-facing work on-site and remotely. Projects are under NDA.
+At SolarSense, I led the visual direction for large-scale exhibitions and commercial installations, creating spatial layouts, lighting moods, set dressing, and presentation visuals for client approval. I worked closely with architects, marketing teams, and production specialists, turning ideas into clear visual concepts and production-ready materials. I also improved the workflow by introducing reusable assets and templates, helping the team iterate faster while keeping the final presentation clean and consistent. Projects are under NDA.
 ---
 3D Graphics Lecturer
 Higher School of Economics (University)
 2023 – 2024
 /Resources/Productions Img/3.jpg
-Taught 3D graphics courses covering modeling, lighting, and rendering for design students, mentoring projects to portfolio-ready quality through structured feedback. Developed assignments and production-focused workflows, while strengthening students’ composition, visual storytelling, and final polish skills.
+As a 3D Graphics Lecturer at the Higher School of Economics, I taught students the basics of 3D graphics, including modeling, lighting, rendering, composition, and final presentation. I prepared assignments, references, and workflows for consistent learning, and helped students improve their projects through feedback on readability, storytelling, lighting, and overall polish. This experience strengthened my ability to explain visual ideas clearly and guide creative work from rough concepts to finished results.
 ---
 Junior 3D Artist
 FIBRA Interactive
 2021
 /Resources/Productions Img/4.jpg
-Supported the art team in creating game-ready props and environment assets, handling modeling, UV mapping, baking, and basic PBR texturing for real-time use. Prepared clean exports, assisted with Unity setup, and iterated based on visual direction and performance requirements.
+At FIBRA Interactive, I worked as a Junior 3D Artist supporting the art team with game-ready props and simple environment assets. I handled modeling, UV mapping, baking, and basic PBR texturing, and helped prepare Unity scenes within style and performance requirements. This role gave me practical experience working from feedback, matching visual direction, and improving assets through iteration in a real production environment.
